@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  FUNKCJA CALLBACK
+  Funkcja zwrotna (callback) - to funkcja, która jest przekazywana do innej funkcji jako argument i w swojej kolejce
+  wywołuje przekazaną funkcję.
+
+  Funkcja wyższego rzędu (higher order function) - funkcja, która przyjmuje jako argumenty inne funkcje lub zwraca
+  funkcję
+  jako rezultat.
+
+  // Funkcja callback
+  function greet(name) {
+  console.log(`Witaj ${name}.`);
+  }
+
+  // Funkcja wyższego rzędu
+  function registerGuest(name, callback) {
+  console.log(`Rejestrujemy gościa ${name}.`);
+  callback(name);
+  }
+
+  registerGuest("Mango", greet);
+  Przekazaliśmy odnośnik do funkcji greet jako argument, dlatego będzie ona przypisana do parametru callback i wywołana
+  wewnątrz funkcji registerGuest za pomocą okrągłych nawiasów. Nazwa parametru dla callback może być dowolna,
+  najważniejsze, aby pamiętać, że wartością będzie funkcja.
+
+
+  <script>
+
+    /*
+    Uzupełnij funkcję makeMessage tak, aby ona oczekiwała jako drugiego parametru (parametr callback) funkcji callback i zwracała jej wywołanie. Funkcja deliverPizza lub makePizza będzie przekazywana jako callback i oczekiwała jako argumentu nazwy gotowej pizzy w dostawie.*/
+
+    function deliverPizza(pizzaName) {
+      return `Delivering ${pizzaName} pizza.`;
+    }
+
+    function makePizza(pizzaName) {
+      return `Pizza ${pizzaName} is being prepared, please wait...`;
+    }
+
+    // Chande code below this line
+    function makeMessage(pizzaName, callback) {
+      return callback(pizzaName);
+
+    }
+
+
+  </script>
+</body>
+
+</html>

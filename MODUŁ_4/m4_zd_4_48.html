@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  KILKA CALLBACKÓW
+  Funkcja może przyjmować dowolną ilość callbacków. Na przykład, wyobraźmy sobie, że piszemy logikę przyjmowania
+  połączeń
+  dla telefonu. Program powinien włączać automatyczną odpowiedź, jeśli abonent jest niedostępny lub uskutecznić
+  połączenie
+  w przeciwnym wypadku. Dostępność abonenta będziemy imitować generatorem losowych liczb, aby między różnymi wywołaniami
+  funkcji można było otrzymać inne rezultaty.
+
+  function processCall(recipient) {
+  // Imitujemy dostępność abonenta poprzez losowy numer
+  const isRecipientAvailable = Math.random() > 0.5;
+
+  if (!isRecipientAvailable) {
+  console.log(`Abonent ${recipient} niedostępny, zostaw wiadomość.`);
+  // Logika aktywacji automatycznej sekretarki
+  } else {
+  console.log(`Łączymy z ${recipient}, proszę czekać...`);
+  // Logika przyjęcia połączenia
+  }
+  }
+
+  processCall("Mango");
+  Problem takiego podejścia polega na tym, że funkcja processCall wykonuje zbyt wiele pracy i przywiązuje sprawdzenie
+  dostępności abonenta do dwóch określonych wcześniej działań. Co w sytuacji, gdy w przyszłości zamiast automatycznej
+  sekretarki trzeba będzie zostawiać hologram?
+
+  Moglibyśmy napisać funkcję tak, aby zwracała jakąś wartość i następnie, zgodnie z rezultatem jej wykonania, sprawdzała
+  i
+  wykonywała potrzebny kod. Sprawdzenie nie odnosi się do zewnętrznego kodu i będzie go zaśmiecać.
+
+  Wykonamy refaktor funkcji tak, aby przyjmowała dwa callabacki onAvailable i onNotAvailable i wywoływała je po
+  spełnieniu
+  warunku.
+
+  function processCall(recipient, onAvailable, onNotAvailable) {
+  // Imitujemy dostępność abonenta losowym numerem
+  const isRecipientAvailable = Math.random() > 0.5;
+
+  if (!isRecipientAvailable) {
+  onNotAvailable(recipient);
+  return;
+  }
+
+  onAvailable(recipient);
+  }
+
+  function takeCall(name) {
+  console.log(`Łączymy z ${name}, proszę czekać...`);
+  // Logika przyjęcia połączenia
+  }
+
+  function activateAnsweringMachine(name) {
+  console.log(`Abonent ${name} niedostępny, zostaw wiadomość.`);
+  // Logika aktywacji automatycznej sekretarki
+  }
+
+  function leaveHoloMessage(name) {
+  console.log(`Abonent ${name} niedostępny, zapisujemy hologram.`);
+  // Logika zapisu hologramu
+  }
+
+  processCall("Mango", takeCall, activateAnsweringMachine);
+  processCall("Poly", takeCall, leaveHoloMessage);
+  Callbacki wykorzystywane są do opracowywania działań użytkownika na stronie, przy opracowywaniu zapytań do serwera,
+  wykonywania wcześniej nieznanych funkcji itp. Na tym polega ich sens – to funkcje przenaczone do opóźnionego
+  wykonania.
+
+  <script>
+
+    /*
+    Należy napisać logikę opracowywania zamówień pizzy. Wykonaj refaktor metody order tak, aby jako drugi i trzeci parametr przyjmowała dwa callbacki onSuccess i onError.
+    
+    Jeśli we właściwości pizzas nie ma pizzy o nazwie z parametru pizzaName, metoda order powinna zwracać rezultat callbacku onError, przekazując mu jako argument łańcuch "There is no pizza with a name <nazwa pizzy> in the assortment."
+    Jeśli we właściwości pizzas jest pizza o nazwie z parametru pizzaName, metoda order powinna zwracać rezultat wywołania callbacku onSuccess, przekazując mu jako argument nazwę zamówionej pizzy.
+    Po zadeklarowaniu obiektu pizzaPalace dodaliśmy callbacki i wywołanie metod. Prosimy niczego tam nie zmieniać.*/
+
+
+    const pizzaPalace = {
+      pizzas: ["Ultracheese", "Smoked", "Four meats"],
+      order(pizzaName, onSuccess, onError) {
+        for (const key of pizzaPalace.pizzas) {
+          if (this.pizzas.includes(pizzaName)) {
+            return onSuccess(pizzaName);
+          }
+          return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+        }
+      },
+    };
+    // Change code above this line
+
+    // Callback for onSuccess
+    function makePizza(pizzaName) {
+      return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+    }
+
+    // Callback for onError
+    function onOrderError(error) {
+      return `Error! ${error}`;
+    }
+
+    // Method calls with callbacks
+    pizzaPalace.order("Smoked", makePizza, onOrderError);
+    pizzaPalace.order("Four meats", makePizza, onOrderError);
+    pizzaPalace.order("Big Mike", makePizza, onOrderError);
+    pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+
+  </script>
+</body>
+
+</html>

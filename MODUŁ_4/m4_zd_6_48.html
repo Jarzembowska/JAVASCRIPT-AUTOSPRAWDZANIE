@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  ZADANIE. FILTROWANIE TABLICY LICZB
+  Funkcja filterArray(numbers, value) przyjmuje tablicę liczb numbers i zwraca nową tablicę, na której będą tylko te
+  elementy oryginalnej tablicy, które są większe niż wartość parametru value.
+
+  Wykonaj refaktor funkcji tak, aby zamiast pętli for wykorzystywała metodę forEach.
+
+  <script>
+    function filterArray(numbers, value) {
+      const filteredNumbers = [];
+      // Change code below this line
+
+      numbers.forEach(function callback(number) {
+        if (number > value) {
+          filteredNumbers.push(number);
+        }
+      });
+
+      // Change code above this line
+      return filteredNumbers;
+    }
+
+
+
+
+
+  </script>
+</body>
+
+</html>

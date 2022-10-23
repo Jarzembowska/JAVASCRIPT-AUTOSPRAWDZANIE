@@ -1,0 +1,71 @@
+<h1>GŁĘBOKA DESTRUKTURYZACJA - ZADANIE</h1>
+<h5>ZADANIE</h5>
+
+<p>Otrzymaliśmy prognozę pogody na dwa dni, </p>
+
+<p>minimalną i maksymalną temperaturą oraz opcjonalnymi ikonami.</p>
+
+<p>Zastąp wszystkie deklaracje zmiennych jedną operacją destrukturyzującą właściwości obiektu forecast.</p>
+
+<p> Ustaw domyślną wartość dla ikon, zmiennych todayIcon i tomorrowIcon - ciąg
+  "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".</p>
+
+<h5>TESTY</h5>
+<li>Zadeklarowana zmienna forecast</li>
+<li>Wartość zmiennej forecast to obiekt</li>
+<li>Zadeklarowana zmienna highToday przy użyciu destrukturyzacji</li>
+<li>Wartość zmiennej highToday to liczba 32</li>
+<li>Zadeklarowana zmienna lowToday przy użyciu destrukturyzacji</li>
+<li>Wartość zmiennej lowToday to liczba 28</li>
+<li>Zadeklarowana zmienna todayIcon przy użyciu destrukturyzacji</li>
+<li>Wartość zmiennej todayIcon to ciąg "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg"</li>
+<li>Zadeklarowana zmienna highTomorrow przy użyciu destrukturyzacji</li>
+<li>Wartość zmiennej highTomorrow to liczba 31</li>
+<li>Zadeklarowana zmienna lowTomorrow przy użyciu destrukturyzacji</li>
+<li>Wartość zmiennej lowTomorrow to liczba 27</li>
+<li>Zadeklarowana zmienna tomorrowIcon przy użyciu destrukturyzacji</li>
+<li>Wartość zmiennej tomorrowIcon to ciąg "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"</li>
+<li>Używana jest składnia destrukturyzacji obiektu highTemperatures </li>
+</ul>
+
+<script>
+  const forecast = {
+    today: {
+      low: 28,
+      high: 32,
+      icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+    },
+    tomorrow: {
+      low: 27,
+      high: 31,
+    },
+  };
+  // Change code below this line
+
+  //PRZED DESTRUKTURYZACJĄ
+
+  // const highToday = forecast.today.high;
+  // const lowToday = forecast.today.low;
+  // const todayIcon = forecast.today.icon;
+
+  // const highTomorrow = forecast.tomorrow.high;
+  // const lowTomorrow = forecast.tomorrow.low;
+  // const tomorrowIcon = forecast.tomorrow.icon;
+
+
+
+  //PO DESTRUKTURYZACJI
+
+  const {
+    today: { low: lowToday, high: highToday, icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg" },
+    tomorrow: { low: lowTomorrow, high: highTomorrow, icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg" },
+  } = forecast;
+
+  console.log(lowToday);
+  console.log(highToday);
+  console.log(todayIcon);
+  console.log(highTomorrow);
+  console.log(lowTomorrow);
+  console.log(tomorrowIcon);
+
+</script>

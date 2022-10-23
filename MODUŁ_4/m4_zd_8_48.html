@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  FUNKCJE STRZAŁKOWE.
+  Funkcje strzałkowe mają skróconą, bardziej lakoniczną składnię, co zmniejsza objętość kodu, zwłaszcza gdy funkcja jest
+  mała lub jest wykorzystywana jako callback.
+
+  Wszystkie strzałki są tworzone jak wyrażenie funkcjonalne i jeśli funkcja nie jest anonimowa, to powinna być
+  przypisana
+  do zmiennej.
+
+  // Zwykłe zadeklarowanie funkcji
+  function classicAdd(a, b, c) {
+  return a + b + c;
+  }
+
+  // To samo, co funkcja strzałkowa
+  const arrowAdd = (a, b, c) => {
+  return a + b + c;
+  };
+  Słowo kluczowe function nie jest wykorzystywane, zamiast tego od razu następuje zadeklarowanie parametrów, za którymi
+  pojawia się symbol => i ciało funkcji.
+
+  Jeśli parametrów jest kilka, to wyliczane są po przecinku w okrągłych nawiasach, między znakami równa się = i strzałką
+  =>.
+
+  const add = (a, b, c) => {
+  return a + b + c;
+  };
+  Jeżeli występuje tylko jeden parametr, jego zadeklarowanie może się odbyć bez okrągłych nawiasów.
+
+  const add = a => {
+  return a + 5;
+  };
+  Jeśli nie ma parametrów, to obowiązkowo powinny pojawić się puste okrągłe nawiasy.
+
+  const greet = () => {
+  console.log("Cześć!");
+  };
+
+
+  <script>
+    //Wykonaj refaktor funkcji calculateTotalPrice() tak, aby była zadeklarowana jako strzałkowa.
+
+
+    const calculateTotalPrice = (quantity, pricePerItem) => {
+      return quantity * pricePerItem;
+    }
+
+
+
+  </script>
+</body>
+
+</html>

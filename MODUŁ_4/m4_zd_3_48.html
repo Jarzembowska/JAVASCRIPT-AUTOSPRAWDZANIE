@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  INLINE CALLBACK
+  Jeśli funkcja callback jest mała i potrzebna tylko do przekazywania do argumentów, można ją zadeklarować bezpośrednio
+  przy wywołaniu funkcji, do której przekazujemy callback. Taka funkcja będzie dostępna tylko jako wartość parametru i
+  nigdzie więcej nie będzie dostępna w kodzie.
+
+  function registerGuest(name, callback) {
+  console.log(`Rejestrujemy gościa ${name}.`);
+  callback(name);
+  }
+
+  // Przekazujemy funkcję inline greet jako callback
+  registerGuest("Mango", function greet(name) {
+  console.log(`Witaj ${name}.`);
+  });
+
+  // Przekazujemy funkcję inline notify jako callback
+  registerGuest("Poly", function notify(name) {
+  console.log(`Szanowny(a) ${name}, twój numer będzie gotowy w ciągu 30 minut.`);
+  });
+
+
+  <script>
+    /*
+    Uzupełnij drugie wywołanie funkcji makePizza(pizzaName, callback), przekazując jako drugi argument inline funkcję callback eatPizza(pizzaName), która loguje łańcuch "Eating pizza <nazwa pizzy>".*/
+
+    function makePizza(pizzaName, callback) {
+      console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+      callback(pizzaName);
+    }
+
+    makePizza("Royal Grand", function deliverPizza(pizzaName) {
+      console.log(`Delivering pizza ${pizzaName}.`);
+    });
+    // Change code below this line
+
+    makePizza("Ultracheese", function eatPizza(pizzaName) {
+      console.log(`Eating pizza ${pizzaName}.`);
+    });
+
+
+
+  </script>
+</body>
+
+</html>

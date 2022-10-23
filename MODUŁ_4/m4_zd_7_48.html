@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  ZADANIE. WSPÓLNE ELEMENTY
+  Funkcja getCommonElements(firstArray, secondArray) przyjmuje dwie tablice dowolnej długości jako parametry firstArray
+  i
+  secondArray i zwraca nową tablicę ich wspólnych elementów, to znaczy tych, które można znaleźć na obu tablicach.
+
+  Wykonaj refaktor funkcji tak, aby zamiast cyklu for wykorzystywała metodę forEach.
+
+
+  <script>
+
+    function getCommonElements(firstArray, secondArray) {
+      const commonElements = [];
+      // Change code below this line
+
+      firstArray.forEach(function callback(firstArray) {
+        if (secondArray.includes(firstArray)) {
+          commonElements.push(firstArray);
+        }
+      });
+
+      return commonElements;
+      // Change code above this line
+    }
+
+
+  </script>
+</body>
+
+</html>

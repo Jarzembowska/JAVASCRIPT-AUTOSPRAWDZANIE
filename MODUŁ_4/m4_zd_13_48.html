@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  CZYSTE FUNKCJE
+  Funkcja z efektami ubocznymi - to funkcja, która w procesie wykonywania może zmieniać lub wykorzystywać globalne
+  zmienne, zmieniać wartość argumentów typu referencyjnego, wykonywać operacje wprowadzenia-wyprowadzenia itd.
+
+  const dirtyMultiply = (array, value) => {
+  for (let i = 0; i < array.length; i +=1) { array[i]=array[i] * value; } }; const numbers=[1, 2, 3, 4, 5];
+    dirtyMultiply(numbers, 2); // Zaszła mutacja pierwotnych danych – tablicy numbers console.log(numbers); // [2, 4, 6,
+    8, 10] Funkcja dirtyMultiply(array, value) zwielokrotnia każdy element tablicy array o liczbę value. Zmienia
+    (mutuje) pierwotną tablicę po odnośniku. Czysta funkcja (pure function) - to funkcja, której rezultat zależy tylko
+    od wartości przekazanych argumentów. Przy jednakowych argumentach zawsze zwraca ten sam rezultat i nie ma efektów
+    ubocznych, to znaczy nie zmienia wartości argumentów. Napiszemy realizację czystej funkcji zwielokrotnienia
+    elementów tablicy zwracającą nową tablicę, nie zmieniając oryginalnej. const pureMultiply=(array, value)=> {
+    const newArray = [];
+
+    array.forEach(element => {
+    newArray.push(element * value);
+    });
+
+    return newArray;
+    };
+
+    const numbers = [1, 2, 3, 4, 5];
+    const doubledNumbers = pureMultiply(numbers, 2);
+
+    // Nie zaszła mutacja oryginalnych danych
+    console.log(numbers); // [1, 2, 3, 4, 5]
+    // Funkcja zwróciła nową tablicę ze zmienionymi danymi
+    console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+
+    <script>
+
+      /*
+      Funkcja changeEven(numbers, value) przyjmuje tablicę liczb numbers i odnawia każdy element, wartością którego jest liczba parzysta, dodając do niego wartość parametru value.
+    
+        Wykonaj refaktor funkcji tak, aby stała się czysta – nie zmieniała tablic liczb numbers, a tworzyła, wypełniała i zwracała nową tablicę z odnowionymi wartościami.
+      */
+
+      function changeEven(numbers, value) {
+        // Change code below this line
+        const evenNum = [];
+
+        numbers.forEach(number => {
+          if (number % 2 === 0) {
+            evenNum.push(number + value);
+          }
+          else { evenNum.push(number) };
+        })
+        return evenNum;
+        // Change code above this line
+      }
+
+
+    </script>
+</body>
+
+</html>

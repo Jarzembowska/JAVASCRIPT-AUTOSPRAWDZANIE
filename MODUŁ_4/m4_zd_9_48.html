@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  NIEJAWNY ZWROT
+  W funkcji strzałkowej po symbolu => pojawia się jej ciało. Tutaj mogą być dwa warianty: z nawiasami klamrowymi i bez
+  nich.
+
+  const add = (a, b, c) => {
+  console.log(a, b, c);
+  return a + b + c;
+  };
+  Jeśli pojawiają się nawiasy klamrowe i funkcja powinna zwracać jakąś wartość, należy jawnie wstawić return. Nazywane
+  jest to jawnym zwrotem (explicit return). Taka składnia wykorzystywana jest w wypadku, gdy w ciele funkcji należy
+  wykonać jeszcze jakieś instrukcje oprócz zwrotu wartości.
+
+  const add = (a, b, c) => a + b + c;
+  Jeśli nie ma nawiasu klamrowego, to zwracany jest rezultat wyrażenia znajdującego się po =>. Nazywane jest to
+  niejawnym
+  zwrotem (implicit return). Dla przykładu, zwrócony zostaje rezultat wyrażenia dodawania parametrów a, b i c.
+
+  Składnia niejawnego zwrotu mocno skraca "szum" zadeklarowania funkcji z ciałem i zwracanym wyrażeniem, ale jest
+  odpowiednia tylko, gdy w ciele funkcji nie potrzeba wykonywać żadnych uzupełniających instrukcji oprócz zwrotu
+  wartości.
+
+  // {Przed}
+  function classicAdd(a, b, c) {
+  return a + b + c;
+  }
+
+  // Po
+  const arrowAdd = (a, b, c) => a + b + c;
+
+
+  <script>
+
+    //Wykonaj refaktor funkcji calculateTotalPrice() tak, aby wykorzystywała niejawny zwrot.
+
+    const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+
+
+
+
+  </script>
+</body>
+
+</html>

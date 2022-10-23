@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  FUNKCJE STRZAŁKOWE JAKO CALLBACKI
+  Anonimowe funkcje strzałkowe świetnie nadają się jako callbacki dla iterujących metod tablicy z powodu krótszej
+  składni
+  deklarowania, szczególnie jeśli niepotrzebne jest ciało funkcji.
+
+  const numbers = [5, 10, 15, 20, 25];
+
+  // Zadeklarowanie funkcji
+  numbers.forEach(function (number, index) {
+  console.log(`Indeks ${index}, wartość ${number}`);
+  });
+
+  // Anonimowa funkcja strzałkowa
+  numbers.forEach((number, index) => {
+  console.log(`Indeks ${index}, wartość ${number}`);
+  });
+  Funkcję strzałkową callback można również deklarować oddzielnie i przekazywać odnośnik do niej. Warto to robić, jeśli
+  jedna funkcja jest wykorzystywana w kilku miejscach programu lub jeśli jest on duży.
+
+  const numbers = [5, 10, 15, 20, 25];
+
+  const logMessage = (number, index) => {
+  console.log(`Indeks ${index}, wartość ${number}`);
+  };
+
+  numbers.forEach(logMessage);
+
+
+  <script>
+
+    //Wykonaj refaktor funkcji calculateTotalPrice(orderedItems), zamieniając jej zadeklarowanie na funkcję strzałkową. Zamień funkcję callback przekazywaną do metody forEach() na funkcję strzałkową.
+
+
+
+    // Change code below this line
+    const calculateTotalPrice = (orderedItems) => {
+      let totalPrice = 0;
+
+      orderedItems.forEach((item) => totalPrice += item);
+
+      return totalPrice;
+    }
+// Change code above this line
+
+
+
+  </script>
+</body>
+
+</html>

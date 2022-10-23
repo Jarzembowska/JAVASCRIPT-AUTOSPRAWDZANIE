@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  FUNKCJA JAKO WARTOŚĆ
+  Funkcje nie różnią się od liczb, łańcuchów czy tablic – to po prostu specjalny rodzaj danych (obiekt wyższego rzędu),
+  wartość, którą można przechowywać w zmiennej lub przekazywać jak argument, do drugiej funkcji.
+
+  function greet(name) {
+  return `Witaj ${name}.`;
+  }
+
+  // Wywołujemy funkcję greet
+  // i wyprowadzamy rezultat na konsolę
+  console.log(greet("Mango"));
+  // Witaj Mango.
+
+  // Wyprowadzamy funkcję greet
+  // na konsolę nie wywołując jej
+  console.log(greet);
+  /*
+  ƒ greet() {
+  return `Witaj ${name}.`;
+  }
+  */
+  W pierwszym logu wywołujemy funkcję greet za pomocą okrągłych nawiasów i na konsolę wyprowadzany jest rezultat jej
+  wykonania. W drugim logu przekazywane jest odesłanie do funkcji, a nie rezultat jej wywołania (brak okrągłych
+  nawiasów),
+  dlatego na konsolę wyprowadzane jest ciało funkcji. Oznacza to, że funkcję można przypisać do zmiennej lub przekazać,
+  jak argument, do drugiej funkcji.
+
+
+  <script>
+
+    //Uzupełnij kod tak, aby w zmiennej result był rezultat wykonania funkcji makePizza, a w zmiennej pointer był odnośnik do funkcji makePizza.
+
+    function makePizza() {
+      return "Your pizza is being prepared, please wait.";
+    }
+    // Change code below this line
+
+    const result = makePizza();
+    const pointer = (makePizza);
+
+
+
+
+  </script>
+</body>
+
+</html>

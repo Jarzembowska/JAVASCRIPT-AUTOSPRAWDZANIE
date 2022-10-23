@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  METODA FOREACH(CALLBACK)
+  Iterująca metoda tablicy, która jest wykorzystywana jako zamiana cykli for i for...of przy pracy ze zbiorem.
+
+  tablica.forEach(function callback(element, index, array) {
+  // Ciało funkcji callback
+  });
+  Iteruje po tablicy element po elemencie.
+  Wywołuje funkcję callback dla każdego elementu tablicy.
+  Niczego nie zwraca.
+  Argumenty funkcji callback to wartość aktualnego elementu element, jego indeks index i sama źródłowa tablica array.
+  Deklarować można tylko te parametry, które są potrzebne, najczęściej to element. Najważniejsze, aby nie zapominać o
+  ich
+  porządku.
+
+  const numbers = [5, 10, 15, 20, 25];
+
+  // Klasyczny for
+  for (let i = 0; i < numbers.length; i +=1) { console.log(`Indeks ${i}, wartość ${numbers[i]}`); } // Iterujący forEach
+    numbers.forEach(function (number, index) { console.log(`Indeks ${index}, wartość ${number}`); }); Jedynym
+    przypadkiem, gdy warto wykorzystać pętlę for lub for...of dla iteracji po tablicy są zadania z przerywaniem
+    wykonywania pętli. Przerwać wykonywania metody forEach nie można – zawsze iteruje tablicę do końca. <script>
+
+    /*
+    Funkcja calculateTotalPrice(orderedItems) przyjmuje jeden parametr orderedItems - tablicę liczb. Podlicza ogólną
+    sumę jej elementów, która zapisuje się w zmiennej totalPrice i zostaje zwrócona jako rezultat działania funkcji.
+    Wykonaj refaktor funkcji tak, aby zamiast pętli for wykorzystywała metodę forEach.*/
+
+
+    function calculateTotalPrice(orderedItems) {
+    let totalPrice = 0;
+    // Change code below this line
+
+    orderedItems.forEach(function callback(orderedItem) {
+    totalPrice += orderedItem;
+    });
+
+
+    // Change code above this line
+    return totalPrice;
+    }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  METODA FOREACH(CALLBACK)
+  Iterująca metoda tablicy, która jest wykorzystywana jako zamiana cykli for i for...of przy pracy ze zbiorem.
+
+  tablica.forEach(function callback(element, index, array) {
+  // Ciało funkcji callback
+  });
+  Iteruje po tablicy element po elemencie.
+  Wywołuje funkcję callback dla każdego elementu tablicy.
+  Niczego nie zwraca.
+  Argumenty funkcji callback to wartość aktualnego elementu element, jego indeks index i sama źródłowa tablica array.
+  Deklarować można tylko te parametry, które są potrzebne, najczęściej to element. Najważniejsze, aby nie zapominać o
+  ich
+  porządku.
+
+  const numbers = [5, 10, 15, 20, 25];
+
+  // Klasyczny for
+  for (let i = 0; i < numbers.length; i +=1) { console.log(`Indeks ${i}, wartość ${numbers[i]}`); } // Iterujący forEach
+    numbers.forEach(function (number, index) { console.log(`Indeks ${index}, wartość ${number}`); }); Jedynym
+    przypadkiem, gdy warto wykorzystać pętlę for lub for...of dla iteracji po tablicy są zadania z przerywaniem
+    wykonywania pętli. Przerwać wykonywania metody forEach nie można – zawsze iteruje tablicę do końca. <script>
+
+    /*
+    Funkcja calculateTotalPrice(orderedItems) przyjmuje jeden parametr orderedItems - tablicę liczb. Podlicza ogólną
+    sumę jej elementów, która zapisuje się w zmiennej totalPrice i zostaje zwrócona jako rezultat działania funkcji.
+    Wykonaj refaktor funkcji tak, aby zamiast pętli for wykorzystywała metodę forEach.*/
+
+
+    function calculateTotalPrice(orderedItems) {
+    let totalPrice = 0;
+    // Change code below this line
+
+    orderedItems.forEach(function callback(orderedItem) {
+    totalPrice += orderedItem;
+    });
+
+
+    // Change code above this line
+    return totalPrice;
+    }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  METODA FOREACH(CALLBACK)
+  Iterująca metoda tablicy, która jest wykorzystywana jako zamiana cykli for i for...of przy pracy ze zbiorem.
+
+  tablica.forEach(function callback(element, index, array) {
+  // Ciało funkcji callback
+  });
+  Iteruje po tablicy element po elemencie.
+  Wywołuje funkcję callback dla każdego elementu tablicy.
+  Niczego nie zwraca.
+  Argumenty funkcji callback to wartość aktualnego elementu element, jego indeks index i sama źródłowa tablica array.
+  Deklarować można tylko te parametry, które są potrzebne, najczęściej to element. Najważniejsze, aby nie zapominać o
+  ich
+  porządku.
+
+  const numbers = [5, 10, 15, 20, 25];
+
+  // Klasyczny for
+  for (let i = 0; i < numbers.length; i +=1) { console.log(`Indeks ${i}, wartość ${numbers[i]}`); } // Iterujący forEach
+    numbers.forEach(function (number, index) { console.log(`Indeks ${index}, wartość ${number}`); }); Jedynym
+    przypadkiem, gdy warto wykorzystać pętlę for lub for...of dla iteracji po tablicy są zadania z przerywaniem
+    wykonywania pętli. Przerwać wykonywania metody forEach nie można – zawsze iteruje tablicę do końca. <script>
+
+    /*
+    Funkcja calculateTotalPrice(orderedItems) przyjmuje jeden parametr orderedItems - tablicę liczb. Podlicza ogólną
+    sumę jej elementów, która zapisuje się w zmiennej totalPrice i zostaje zwrócona jako rezultat działania funkcji.
+    Wykonaj refaktor funkcji tak, aby zamiast pętli for wykorzystywała metodę forEach.*/
+
+
+    function calculateTotalPrice(orderedItems) {
+    let totalPrice = 0;
+    // Change code below this line
+
+    orderedItems.forEach(function callback(orderedItem) {
+    totalPrice += orderedItem;
+    });
+
+
+    // Change code above this line
+    return totalPrice;
+    }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  METODA FOREACH(CALLBACK)
+  Iterująca metoda tablicy, która jest wykorzystywana jako zamiana cykli for i for...of przy pracy ze zbiorem.
+
+  tablica.forEach(function callback(element, index, array) {
+  // Ciało funkcji callback
+  });
+  Iteruje po tablicy element po elemencie.
+  Wywołuje funkcję callback dla każdego elementu tablicy.
+  Niczego nie zwraca.
+  Argumenty funkcji callback to wartość aktualnego elementu element, jego indeks index i sama źródłowa tablica array.
+  Deklarować można tylko te parametry, które są potrzebne, najczęściej to element. Najważniejsze, aby nie zapominać o
+  ich
+  porządku.
+
+  const numbers = [5, 10, 15, 20, 25];
+
+  // Klasyczny for
+  for (let i = 0; i < numbers.length; i +=1) { console.log(`Indeks ${i}, wartość ${numbers[i]}`); } // Iterujący forEach
+    numbers.forEach(function (number, index) { console.log(`Indeks ${index}, wartość ${number}`); }); Jedynym
+    przypadkiem, gdy warto wykorzystać pętlę for lub for...of dla iteracji po tablicy są zadania z przerywaniem
+    wykonywania pętli. Przerwać wykonywania metody forEach nie można – zawsze iteruje tablicę do końca. <script>
+
+    /*
+    Funkcja calculateTotalPrice(orderedItems) przyjmuje jeden parametr orderedItems - tablicę liczb. Podlicza ogólną
+    sumę jej elementów, która zapisuje się w zmiennej totalPrice i zostaje zwrócona jako rezultat działania funkcji.
+    Wykonaj refaktor funkcji tak, aby zamiast pętli for wykorzystywała metodę forEach.*/
+
+
+    function calculateTotalPrice(orderedItems) {
+    let totalPrice = 0;
+    // Change code below this line
+
+    orderedItems.forEach(function callback(orderedItem) {
+    totalPrice += orderedItem;
+    });
+
+
+    // Change code above this line
+    return totalPrice;
+    }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
