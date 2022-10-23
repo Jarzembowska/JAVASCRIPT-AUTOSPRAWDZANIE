@@ -1,0 +1,40 @@
+<h1>METODA OBJECT.KEYS() - ZADANIE</h1>
+<H5>ZADANIE</H5>
+<P>Iteruj po obiekcie apartment za pomocą metody Object.keys() i pętli for...of. <br>
+  Zapisz w zmiennej keys tablicę
+  kluczy
+  własnych właściwości obiektu apartment, i dodaj wszystkie wartości jego właściwości do tablicy values.</P>
+<H5>TESTY</H5>
+<ul>
+  <li>Zadeklarowana jest zmienna apartment.</li>
+
+  <li>Wartością zmiennej apartment jest obiekt.</li>
+
+  <li>Zadeklarowana jest zmienna keys.</li>
+
+  <li>Wartością zmiennej keys jest tablica ["descr", "rating", "price"].</li>
+
+  <li>Wartość zmiennej keys została uzyskana przy użyciu metody Object.keys().</li>
+
+  <li>Zadeklarowana jest zmienna values.</li>
+
+  <li>Wartością zmiennej values jest tablica ["Spacious apartment in the city center", 4, 2153].</li>
+
+  <li>Wartość zmiennej values została uzyskana przy użyciu pętli for...of.</li>
+</ul>
+<script>
+  const apartment = {
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+  };
+  const values = [];
+  // Change code below this line
+  const keys = Object.keys(apartment);
+  for (const key of keys) {
+    // console.log(key);
+    values.push(apartment[key]);
+  }
+  // console.log(keys);
+  console.log(values);
+</script>

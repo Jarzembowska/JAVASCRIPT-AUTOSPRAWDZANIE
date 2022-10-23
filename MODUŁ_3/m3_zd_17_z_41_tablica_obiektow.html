@@ -1,0 +1,42 @@
+<h1>TABLICE OBIEKTÓW - ZADANIE</h1>
+<h5>ZADANIE</h5>
+<p>Iteruj po tablicy obiektów colors </p>
+<p>używając pętli for...of.</p>
+D<p>Dodaj do tablicy hexColors wartości właściwości hex,</p>
+<p>do tablicy rgbColors wartości właściwości rgb</p>
+<p>ze wszystkich obiektów w tablicy colors.</p>
+
+<H5>TESTY</H5>
+<ul>
+  <li>Zadeklarowana zmienna colors</li>
+
+  <li>Wartość zmiennej colors to tablica</li>
+
+  <li>Zadeklarowana zmienna hexColors</li>
+
+  <li>Wartość zmiennej hexColors to tablica ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]</li>
+
+  <li>Zadeklarowana zmienna rgbColors</li>
+
+  <li>Wartość zmiennej rgbColors to tablica ["244,67,54", "33,150,243", "76,175,80", "255,235,59"] </li>
+</ul>
+<script>
+  const colors = [
+    { hex: "#f44336", rgb: "244,67,54" },
+    { hex: "#2196f3", rgb: "33,150,243" },
+    { hex: "#4caf50", rgb: "76,175,80" },
+    { hex: "#ffeb3b", rgb: "255,235,59" },
+  ];
+
+  const hexColors = [];
+  const rgbColors = [];
+
+  for (const color of colors) {
+    hexColors.push(color.hex);
+    rgbColors.push(color.rgb);
+  };
+
+  console.log(hexColors);
+  console.log(rgbColors);
+// Change code below this line
+</script>

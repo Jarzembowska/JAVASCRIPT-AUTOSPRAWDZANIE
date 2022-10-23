@@ -1,0 +1,34 @@
+<h1>ZADANIE - WYDATKI NA WYNAGORDZENIA</h1>
+
+<H5>ZADANIE</H5>
+
+<p>Napisz funkcję countTotalSalary(salaries), która pobiera obiekt wynagrodzeń, gdzie nazwą właściwości jest nazwisko
+  pracownika,</p>
+<p>a wartością właściwości jest wynagrodzenie</p>
+<p>Funkcja powinna obliczyć łączną kwotę wynagrodzeń pracowników i zwrócić ją.</p>
+<p>Użyj zmiennej totalSalary, aby zapisać łączną pensję.</p>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana jest funkcja countTotalSalary(salaries)</li>
+  <li>Wywołanie countTotalSalary({}) zwraca 0</li>
+  <li>Wywołanie countTotalSalary({ mango: 100, poly: 150, alfred: 80 }) zwraca 330</li>
+  <li>Wywołanie countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }) zwraca 400</li>
+  <li>Funkcja uwzględnia tylko własne właściwości obiektu</li>
+</ul>
+
+<script>
+  function countTotalSalary(salaries) {
+    let totalSalary = 0;
+    const values = Object.values(salaries);
+    for (const value of values) {
+      totalSalary += value;
+    }
+    return totalSalary;
+
+  };
+
+  console.log(countTotalSalary({})); // 0
+  console.log(countTotalSalary({ mango: 100, poly: 50, ajax: 150 })); // 300
+
+</script>

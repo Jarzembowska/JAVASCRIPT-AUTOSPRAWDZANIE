@@ -1,0 +1,34 @@
+<h1>METODA OBJECT.KEYS() - TEORIA</h1>
+<!-- TEORIA -->
+<!-- Wbudowana klasa Object posiada kilka przydatnych metod pracy z obiektami.
+Pierwszy to 
+  Object.keys(obj) - który pobiera i zwraca tablicę kluczy jego własnych właściwości. Jeśli obiekt nie ma właściwości, metoda zwróci pustą tablicę -->
+<script>
+  //   const book = {
+  //   title: "Ostatnie królestwo",
+  //   author: "Bernard Cornwell",
+  //   genres: ["proza ​​historyczna", "przygody"],
+  //   rating: 8.38,
+  // };
+  // const keys = Object.keys(book);
+  // console.log(keys); // ["title", "author", "genres", "rating"]
+
+  // Łącząc wynik Object.keys() i pętlę for...of, można wygodnie iterować po włascnych właściwościach obiektu bez uciekania się do archaicznej pętli for...in z kontrolą właściwości własności
+
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    genres: ["proza ​​historyczna", "przygody"],
+    rating: 8.38,
+  };
+
+  const keys = Object.keys(book);
+
+  for (const key of keys) {
+    // Klucz - właściwość
+    console.log(key);
+    //Wartość właściwości
+    console.log(book[key]);
+  }
+// Iterujemy po tablicy kluczy (właściwości) obiektu i w każdej iteracji otrzymujemy wartość właściowości z takim kluczem
+</script>

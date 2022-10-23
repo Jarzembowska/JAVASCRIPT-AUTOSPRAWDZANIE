@@ -1,0 +1,23 @@
+<h1>ZMIANA WARTOŚCI WŁAŚCIWOŚCI - TEORIA</h1>
+<!-- TEORIA -->
+<!-- Po utworzeniu obiektu można zmienić wartość jego właściwości.
+Aby to zrobić, musisz odnieść się do nich poprzez nazwę, na przykład "za pomocą kropki", i przypisać nową wartość -->
+
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    genres: ["proza ​​historyczna", "przygody"],
+    public: true,
+    rating: 8.38,
+  };
+
+  book.rating = 9;
+  book.public = false;
+  book.genres.push("dramat");
+
+  console.log(book.rating); // 9
+  console.log(book.public); // false
+  console.log(book.genres); // ["proza historyczna", "przygody", "dramat"]
+
+</script>

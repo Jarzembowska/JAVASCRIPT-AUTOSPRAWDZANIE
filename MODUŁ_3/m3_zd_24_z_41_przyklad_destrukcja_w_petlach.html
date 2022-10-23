@@ -1,0 +1,51 @@
+<h1>DESTRUKTURYZACJA W PĘTLACH - TEORIA</h1>
+<h5>TEORIA</h5>
+<p>Podczas iteracji po tablicy obiektów z pętlą FOR...OF uzyskuje się wiele wywołań właściwości obiektu</p>
+<script>
+  const books = [
+    {
+      title: "Ostatnie królestwo",
+      author: "Bernard Cornwell",
+      rating: 8.38,
+    },
+    {
+      title: "Beside Still Waters",
+      author: "Robert Sheckley",
+      rating: 8.51,
+    }
+  ];
+
+
+  //PRZED DESTRUKTURYZACJĄ 
+
+  for (const book of books) {
+    console.log(book.title); // zwróci oba tytuły - Ostatnie królestwo oraz Beside Still Waters - nie w formie tablicy
+    console.log(book.author); // zwróci obu autorów - Bernard Cornwell oraz Robert Sheckley - nie w formie tablicy
+    console.log(book.rating); // zwróci obie awrtości rating - nie w formie tablicy - 8.38, 8.51
+  }
+
+  // PO DESTRUKTURYZACJI W CIELE PĘTLI
+
+  // Aby zmniejszyć liczbę powtórzeń, możesz dokonać destrukturyzacji właściwości obiektu do zmiennych lokalnych w ciele pętli
+
+  for (const book of books) {
+    const { title, author, rating } = book;
+    console.log(title);
+    console.log(author);
+    console.log(rating);
+  }
+
+  // Jeśli obiekt ma wiele właściwości, destrukturyzację można przeprowadzić bezpośrednio w miejscu, w którym zadeklarowana jest zmienna book
+  for (const { title, author, rating } of books) {
+    console.log(title);
+    console.log(author);
+    console.log(rating);
+  }
+
+</script>
+
+<p>Aby zmniejszyć liczbę powtórzeń, możesz dokonać destrukturyzacji właściwości obiektu do zmiennych lokalnych w ciele
+  pętli</p>
+
+<p>Jeśli obiekt ma wiele właściwości, destrukturyzację można przeprowadzić bezpośrednio w miejscu, w którym
+  zadeklarowana jest zmienna book</p>

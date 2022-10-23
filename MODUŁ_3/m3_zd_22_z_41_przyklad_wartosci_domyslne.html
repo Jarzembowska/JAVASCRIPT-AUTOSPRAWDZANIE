@@ -1,0 +1,24 @@
+<h1>WARTOŚCI DOMYŚLNE</h1>
+
+<h5>TEORIA</h5>
+
+<p>Aby uniknąć przypisania undefined podczas destrukturyzacji nieistniejących właściwości,</p>
+<p>możesz ustawić domyślne wartości zmiennych, które zostaną przypisane tylko wtedy, gdy obiekt nie ma właściwości o tej
+  samej nazwie.</p>
+
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+  };
+  // Dodaj zdjęcie na okładkę, jeśli nie ma go w obiekcie książki
+
+  const {
+    title,
+    coverImage = "https://via.placeholder.com/640/480",
+    author,
+  } = book;
+  console.log(title); // Ostatnie królestwo
+  console.log(author); // Bernard Cornwell
+  console.log(coverImage); // "https://via.placeholder.com/640/480"
+</script>

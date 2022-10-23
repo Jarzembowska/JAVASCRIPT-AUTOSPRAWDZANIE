@@ -1,0 +1,30 @@
+<h1>funkcja INCLUDES()</h1>
+<SCRIPT>
+
+  //pierwszy sposób
+  // function includes(array, value) {
+  //   // Change code below this line
+  //   for (i = 0; i < array.length; i++) {
+  //     if (array[i] === value) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  //   // Change code above this line
+  // }
+
+  // drugi sposób
+  function includes(array, value) {
+    // Change code below this line
+    let element = false;
+    for (const item of array) {
+      if (item === value) {
+        element = true;
+      }
+    }
+    return element;
+    // Change code above this line
+  }
+  console.log(includes([1, 2, 3, 4, 5], 3));
+  console.log(includes([1, 2, 3, 4, 5], 17));
+</SCRIPT>

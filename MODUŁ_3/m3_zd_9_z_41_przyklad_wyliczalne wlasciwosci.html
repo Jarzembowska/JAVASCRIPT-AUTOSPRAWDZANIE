@@ -1,0 +1,28 @@
+<h1>WYLICZALNE WLASCIWOSCI</h1>
+<!-- TEORIA -->
+<!-- Zdarzają się sytuacje, w których podczas deklarowania obiektu konieczne jest dodanie właściwości o nazwie, której z góry nie znamy, ponieważ jest ona przechowywana jako wartość zmiennej lub jako wynik funkcji -->
+<!-- Wcześniej w tym celu trzeba było najpierw utworzyć obiekt, a następnie dodać właściwość za pomocą nawiasów kwadratowych, co nie jest zbyt wygodne -->
+
+<!-- 
+  const propName = "name";
+  const user = {
+    age = 25,
+  };
+
+  user[propName] = "Henryk Cibola";
+  console.log(user.name); //"Henryk Cibola"
+ -->
+
+<!-- Składnia wyliczalnych właściwości (computed properties) pomaga uniknąć niepotrzebnego kodu, a w niektórych przypadkach go uprościć. 
+Wartość wyliczalnej właściwości może być dowolnym poprawnym wyrażeniem -->
+
+<script>
+  const propName = "name";
+  const user = {
+    age: 25,
+    // Nazwa tej zmiennej zostanie pobrana z wartości zmiennej propName
+    [propName]: "Henryk Cibola",
+  };
+
+  console.log(user.name); // "Henryk Cibola"
+</script>

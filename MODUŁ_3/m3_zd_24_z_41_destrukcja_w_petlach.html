@@ -1,0 +1,50 @@
+<h1>DESTRUKTURYZACJA W PĘTLACH - ZADANIE</h1>
+<h5>ZADANIE</h5>
+<p>Refatoryzuj pętlę FOR...OF, aby używała destrukturyzacji obiektu</p>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana zmienna colors</li>
+  <li>Wartość zmiennej colors to tablica</li>
+  <li>Zadeklarowana zmienna hexColors</li>
+  <li>Wartość zmiennej hexColors to tablica ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]</li>
+  <li>Zadeklarowana zmienna rgbColors</li>
+  <li>Wartość zmiennej rgbColors to tablica ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]</li>
+  <li>Aby iterować po tablicy, użyj pętli for...of</li>
+  <li>Destrukturyzacja obiektów jest używana w pętli for...of </li>
+</ul>
+<script>
+  const colors = [
+    { hex: "#f44336", rgb: "244,67,54" },
+    { hex: "#2196f3", rgb: "33,150,243" },
+    { hex: "#4caf50", rgb: "76,175,80" },
+    { hex: "#ffeb3b", rgb: "255,235,59" },
+  ];
+
+  const hexColors = [];
+  const rgbColors = [];
+  // Change code below this line
+
+  // PRZED REFAKTORYZACJĄ
+
+  // for (const color of colors) {
+  //   hexColors.push(color.hex);
+  //   rgbColors.push(color.rgb);
+  // }
+
+  // PO REFAKTORYZACJI
+
+  //w ciele pętli
+  for (const color of colors) {
+    const { hex, rgb } = color;
+    hexColors.push(hex);
+    rgbColors.push(rgb);
+  }
+  // bezpośrednio w warunku zamiast zmienej color
+  for (const { hex, rgb } of colors) {
+    hexColors.push(hex);
+    rgbColors.push(rgb);
+  }
+  console.log(hexColors); // tablica ['#f44336', '#2196f3', '#4caf50', '#ffeb3b']
+  console.log(rgbColors); // tablica ['244,67,54', '33,150,243', '76,175,80', '255,235,59']
+</script>

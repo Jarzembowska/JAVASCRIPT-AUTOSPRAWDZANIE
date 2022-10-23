@@ -1,0 +1,46 @@
+<h1>TABLICA OBIEKTÓW</h1>
+<H5>TEORIA</H5>
+<P>Standardowy zestaw codziennych zadań programisty obejmuje manipulowanie tablicą obiektów tego samego typu</P>
+<p>Oznacza to, że wszystkie obiekty w tablicy mają ten sam zestaw właściwości, ale różne wartości</p>
+<p>Do iteracji po takiej tablicy używana jest
+<p>standardowa pętla FOR...OF.
+<p>Wartośc właściwości każdego obiektu można uzyskac za pomoca składni "kropkowanej",
+<p>ponieważ w każdym obiekcie zestaw właściwości i
+<p>ich nazwy będą takie same, różnią sie tylko wartościami
+
+  <script>
+    const books = [
+      {
+        title: "Ostatnie królestwo",
+        author: "Bernard Cornwell",
+        rating: 8.38,
+      },
+      {
+        title: "Beside Still Waters",
+        author: "Robert Sheckley",
+        rating: 8.51,
+      },
+      {
+        title: "Sen śmiesznego człowieka",
+        author: "Fiodor Dostojewski",
+        rating: 7.75,
+      }
+    ];
+
+    // Do iteracji po takiej tablicy używana jest 
+    // standardowa pętla FOR...OF.
+    // Wartośc właściwości każdego obiektu można uzyskac za pomoca składni "kropkowanej",
+    // ponieważ w każdym obiekcie zestaw właściwości i 
+    // ich nazwy będą takie same, różnią sie tylko wartościami
+
+    for (const book of books) {
+      // Obiekt książka
+      console.log(book);
+      // tytuł
+      console.log(book.title);
+      // autor
+      console.log(book.author);
+      // Ocena
+      console.log(book.rating);
+    }
+  </script>

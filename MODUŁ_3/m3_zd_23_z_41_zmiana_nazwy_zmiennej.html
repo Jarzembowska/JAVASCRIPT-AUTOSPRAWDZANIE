@@ -1,0 +1,46 @@
+<h1>ZMIANA NAZWY ZMIENNEJ - ZADANIE</h1>
+
+<h5>ZADANIE</h5>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana zmienna highTemperatures</li>
+  <li>Wartość zmiennej highTemperatures to obiekt</li>
+  <li>Zadeklarowana zmienna highYesterday</li>
+  <li>Wartość zmiennej highYesterday to liczba 28</li>
+  <li>Zadeklarowana zmienna highToday</li>
+  <li>Wartość zmiennej highToday to liczba 26</li>
+  <li>Zadeklarowana zmienna highTomorrow</li>
+  <li>Wartość zmiennej highTomorrow to liczba 33</li>
+  <li>Zadeklarowana zmienna highIcon</li>
+  <li>Wartość zmiennej highIcon to ciąg "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"</li>
+  <li>Używana jest destrukturyzacja obiektów</li>
+</ul>
+
+<script>
+  const highTemperatures = {
+    yesterday: 28,
+    today: 26,
+    tomorrow: 33,
+  };
+  // Change code below this line
+
+  // const highYesterday = highTemperatures.yesterday;
+  // const highToday = highTemperatures.today;
+  // const highTomorrow = highTemperatures.tomorrow;
+  // const highIcon = highTemperatures.icon;
+
+  const {
+    yesterday: highYesterday,
+    today: highToday,
+    tomorrow: highTomorrow,
+    icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+  } = highTemperatures;
+
+  // Change code above this line
+  const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+  console.log(meanTemperature); // 29
+  console.log(highIcon); // "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+  console.log(highTemperatures); // oejct {yesterday: 28, today: 26, tomorrow: 33}
+</script>

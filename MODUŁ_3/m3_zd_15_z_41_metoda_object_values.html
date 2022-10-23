@@ -1,0 +1,29 @@
+<h1>METOD OBJECT.VALUES() - ZADANIE</h1>
+<H5>ZADANIE</H5>
+<p>Zapisz w zmiennej keys tablicę kluczy własnych właściwości obiektu apartment,</p>
+<p>do zmiennej values tablicę wszystkich wartości jego właściwości. </p>
+<p>żyj metod Object.keys() i Object.values().</p>
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana jest zmienna apartment</li>
+  <li>Wartość zmiennej apartment to obiekt</li>
+  <li>Zadeklarowana jest zmienna keys</li>
+  <li>Wartość zmiennej keys to tablica ["descr", "rating", "price"]</li>
+  <li>Zadeklarowana jest zmienna values</li>
+  <li>Wartość zmiennej values to tablica ["Spacious apartment in the city center", 4, 2153]</li>
+  <li>Aby uzyskać tablicę kluczy obiektu apartment używa się Object.keys()</li>
+  <li>Aby uzyskać tablicę wartości obiektu apartment używa się Object.values() </li>
+</ul>
+<script>
+  const apartment = {
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+  };
+  // Change code below this line
+  const keys = Object.keys(apartment);
+  const values = Object.values(apartment);
+
+  console.log(keys);
+  console.log(values);
+</script>

@@ -1,0 +1,35 @@
+<h1>PĘTLA FOR...IN</h1>
+
+
+<script>
+  const apartment = {
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+  };
+
+  // PIERWSZY SPOSÓB ZAPISANIA ZADANIA
+
+  // const keys = [];
+  // for (const key in apartment) {
+  //   console.log(key); // wywołanie kazdej wartości wykonananego powtórzenia pętli 
+  //   keys.push(key);
+  // }
+  // const values = [];
+  // for (const value in apartment) {
+  //   console.log(apartment[value]); //wywołanie każdej wartości w wykonywaniu pętli
+  //   values.push(apartment[value]);
+  // }
+
+  // DRUGI SPOSÓB ZAPISANIA ZADANIA
+
+  const keys = [];
+  const values = [];
+  for (const key in apartment) {
+    keys.push(key);
+    values.push(apartment[key]);
+  }
+  // Change code below this line
+  console.log(keys);
+  console.log(values);
+</script>

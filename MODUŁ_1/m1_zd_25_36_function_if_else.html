@@ -1,0 +1,20 @@
+<title>Zadanie 25 z 36</title>
+<script>
+  function checkStorage(available, ordered) {
+    let message;
+    if (available < ordered) {
+      message = `Not enought goods in stock!`;
+    } else {
+      message = `Order is processed, our manager will contact you.`;
+    }
+
+    return message;
+
+  }
+  console.log(checkStorage(100, 50));
+  console.log(checkStorage(100, 130));
+  console.log(checkStorage(200, 20));
+  console.log(checkStorage(200, 150));
+  console.log(checkStorage(150, 180));
+
+</script>

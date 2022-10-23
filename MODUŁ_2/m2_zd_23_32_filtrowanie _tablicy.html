@@ -1,0 +1,21 @@
+<h1>Filtrowanie Tablicy Liczb</h1>
+<script>
+  function filterArray(numbers, value) {
+    // Change code below this line
+
+    let newArray = [];
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] <= value) {
+        continue;
+      }
+      newArray.push(numbers[i]);
+    }
+    return newArray;
+  }
+  // Change code above this line
+
+
+  console.log(filterArray([1, 2, 3, 4, 5], 3));
+  console.log(filterArray([3, 6, 8, 10, 12], 6));
+
+</script>

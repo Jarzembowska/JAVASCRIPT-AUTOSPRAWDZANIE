@@ -1,0 +1,48 @@
+<h1>ZADANIE> KOLEKCJA WARTOŚCI WŁAŚCIWOŚCI</h1>
+<h5>ZADANIE</h5>
+<p>Napisz funkcję getAllPropValues(propName), która przyjmuje jeden parametr propName - nazwę (klucz) właściwości.</p>
+<p>Funkcja powinna zwrócić tablicę wszystkich wartości właściwości o tej nazwie z każdego obiektu w tablicy products</p>
+<p>Jeśli w obiektach nie ma właściwości o tej nazwie, funkcja musi zwrócić pustą tablicę.</p>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana jest funkcja getAllPropValues(propName)</li>
+  <li>Wywołanie getAllPropValues("name") zwraca ["Radar", "Scanner", "Droid", "Grip"]</li>
+  <li>Wywołanie getAllPropValues("quantity") zwraca [4, 3, 7, 9]</li>
+  <li>Wywołanie getAllPropValues("price") zwraca [1300, 2700, 400, 1200]</li>
+  <li> Wywołanie getAllPropValues("category") zwraca []</li>
+</ul>
+<script>
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+
+  function getAllPropValues(propName) {
+    // Change code below this line
+    let propValues = [];
+    for (const key of products) {
+      // key zwraca wszystkie obiekty w tablicy obiektów
+      // console.log(key);
+      if (propName === "name") {
+        propValues.push(key.name);
+      }
+      if (propName === "price") {
+        propValues.push(key.price);
+      }
+      if (propName === "quantity") {
+        propValues.push(key.quantity);
+      }
+
+    }
+    return propValues;
+
+
+    // Change code above this line
+  }
+  console.log(getAllPropValues("name"));
+  console.log(getAllPropValues("price"));
+  console.log(getAllPropValues("quantity"));
+</script>

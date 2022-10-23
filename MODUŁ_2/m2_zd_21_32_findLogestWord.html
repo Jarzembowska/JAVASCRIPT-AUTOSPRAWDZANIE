@@ -1,0 +1,17 @@
+<h1>Find Longest Word</h1>
+<script>
+  function findLongestWord(string) {
+
+    // let myString;
+    let myWord = "";
+    let myString = string.split(" ");
+    for (let i = 0; i < myString.length; i++) {
+      if (myString[i].length > myWord.length) {
+        myWord = myString[i];
+      }
+    }
+    return myWord;
+  }
+  console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+  console.log(findLongestWord("Google do a roll"));
+</script>

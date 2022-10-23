@@ -1,0 +1,23 @@
+<h1>WYLICZALNE WŁAŚCIOWOŚCI - ZADANIE</h1>
+<!-- Uzupełnij kod deklarujący obiekt credentials, aby w rezultacie miał dwie właściwości: 
+  email i 
+  password, 
+  których nazwy są przechowywane w zmiennych 
+  emailInputName
+   i 
+   passwordInputName.
+
+Wartością właściwości email musi być ciąg "henry.carter@aptmail.com" oraz wartością właściwości password ciąg "jqueryismyjam". -->
+<script>
+  const emailInputName = "email";
+  const passwordInputName = "password";
+
+  const credentials = {
+    // Change code below this line
+    [emailInputName]: "henry.carter@aptmail.com",
+    [passwordInputName]: "jqueryismyjam",
+    // Change code above this line
+  };
+  console.log(credentials.email); // "henry.carter@aptmail.com"
+  console.log(credentials.password); // "jqueryismyjam"
+</script>

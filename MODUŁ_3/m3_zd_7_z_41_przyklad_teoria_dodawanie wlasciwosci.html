@@ -1,0 +1,23 @@
+<h1>DODAWANIE WŁAŚCIWOŚCI - TEORIA</h1>
+<!-- TEORIA -->
+<!-- Operacja dodawania nowej właściwości
+po utworzeniu obiektu nie różni się od zmiany
+wartości istniejącej właściwości
+Jeśli podczas zapisywania wartości po nazwie nie ma takiej właściwości w obiekcie, zostanie ona utworzona -->
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    genres: ["proza ​​historyczna", "przygody"],
+    public: true,
+    rating: 8.38,
+  };
+
+  book.pageCount = 836;
+  book.oryginalLanguage = "en";
+  book.translations = ["ua", "ru"];
+
+  console.log(book.pageCount); //en
+  console.log(book.oryginalLanguage); // "en"
+  console.log(book.translations); // ["ua", "ru"]
+</script>

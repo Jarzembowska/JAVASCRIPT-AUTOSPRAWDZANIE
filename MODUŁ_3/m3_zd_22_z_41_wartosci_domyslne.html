@@ -1,0 +1,55 @@
+<h1>WARTOŚCI DOMYŚLNE - ZADANIE</h1>
+<h5>ZADANIE</h5>
+<P>Prognoza maksymalnej temperatury może mieć również opcjonalną właściwość icon - ikonę pogody.</P>
+<p>Zastąp deklaracje zmiennych yesterday, today, tomorrow i icon jedną operacją destrukturyzującą właściwości obiektu
+  highTemperatures. </p>
+<p>Ustaw domyślną wartość dla icon - ciąg "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".</p>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowano zmienną highTemperatures</li>
+  <li>Wartość zmiennej highTemperatures to obiekt</li>
+  <li>Zadeklarowano zmienną highTemperatures</li>
+  <li>Wartość zmiennej highTemperatures to obiekt</li>
+  <li>Zadeklarowano zmienną yesterday przy użyciu destrukturyzacji</li>
+  <li>Wartość zmiennej yesterday to liczba 28</li>
+  <li>Zadeklarowano zmienną today przy użyciu destrukturyzacji</li>
+  <li>Wartość zmiennej today to liczba 26</li>
+  <li>Zadeklarowano zmienną tomorrow przy użyciu destrukturyzacji</li>
+  <li>Wartość zmiennej tomorrow to liczba 33</li>
+  <li>Zadeklarowano zmienną icon przy użyciu destrukturyzacji</li>
+  <li>Wartość zmiennej icon to ciąg "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".</li>
+  <li> Używana jest destrukturyzacja obiektów</li>
+</ul>
+
+<script>
+  const highTemperatures = {
+    yesterday: 28,
+    today: 26,
+    tomorrow: 33,
+  };
+  // Change code below this line
+
+  //PRZED DESTRUKTURYZACJĄ
+
+  // const yesterday = highTemperatures.yesterday;
+  // const today = highTemperatures.today;
+  // const tomorrow = highTemperatures.tomorrow;
+  // const icon = highTemperatures.icon;
+
+  // PO DESTRUKTURYZACJI
+  const {
+    yesterday,
+    today,
+    tomorrow,
+    icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+  } = highTemperatures;
+
+  // Change code above this line
+  const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+  console.log(highTemperatures); // ojekt {yesterday: 28, today: 26, tomorrow: 33}
+  console.log(icon); // "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+  console.log(meanTemperature); // 29
+
+</script>

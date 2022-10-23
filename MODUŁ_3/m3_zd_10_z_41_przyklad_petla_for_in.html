@@ -1,0 +1,26 @@
+<h1>PĘTLA FOR...IN</h1>
+<!-- TEORIA -->
+<!-- W przeciwieństwie do tablicy lub ciągu, obiekt nie jest jednostką iterowalną, to znaczy nie może być iterwany za pomocą pętli FOR lub FOR...OF.
+Aby iterować po obiektach, użyj specjalnej peętli FOR...IN, która iteruje po kluczach obiektu OBJECT -->
+
+<!-- FOR (KEY IN OBJECT) {
+    //INSTRUKCJA
+  } 
+-->
+
+<!-- Zmienna KEY jest dostępna tylko w ciele pętli. W każdej iteracji zostanie do niej zapisana wartość klucza (nazwa) właściwości.
+Aby uzyskać wartość właściowości z takim kluczem(nazwą), używana jest składnia nawiasów kwadratowych -->
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    genres: ["proza historyczna", "przygody"],
+    rating: 8.38,
+  };
+  for (const key in book) {
+    //Klucz
+    console.log(key);
+    //Wartość właściwości z tym kluczem
+    console.log(book[key]);
+  }
+</script>

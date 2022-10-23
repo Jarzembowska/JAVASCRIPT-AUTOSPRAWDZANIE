@@ -1,0 +1,20 @@
+<h1>przykład - operator break vs return w funkcji</h1>
+<script>
+  function fn() {
+    for (let i = 0; i <= 5; i += 1) {
+      console.log(i);
+
+      if (i === 3) {
+        console.log("Znaleźliśmy liczbę 3, robimy zwrot, przerywając pętlę w funkcji");
+        return i;
+      }
+    }
+
+    // Ten console.log nie wykona się
+    console.log("Log po pętli w ciele funkcji");
+  }
+
+  const result = fn();
+  console.log("Log po wyjściu z funkcji");
+  console.log(`Rezultat wykonania funkcji ${result}`);
+</script>

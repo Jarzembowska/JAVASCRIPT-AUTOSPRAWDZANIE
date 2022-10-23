@@ -1,0 +1,43 @@
+<h1>ZADANIE. POSZUKIWANIE OBIEKTU WEDŁUG WARTOŚCI WŁAŚCIWOŚCI</h1>
+<h5>ZADANIE</h5>
+<p>Napisz funkcję getProductPrice(productName) która przyjmuje jeden parametr productName - nazwę produktu</p>
+<p>Funkcja szuka obiektu produktu o tej nazwie (właściwość name) w tablicy products i zwraca jego cenę (właściwość
+  price).</p>
+<p>Jeśli nie zostanie znaleziony żaden produkt o tej nazwie, funkcja powinna zwrócić null.</p>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana jest funkcja getProductPrice(productName).</li>
+  <li>Wywołanie getProductPrice("Radar") zwraca 1300</li>
+  <li>Wywołanie getProductPrice("Grip") zwraca 1200.</li>
+  <li>Wywołanie getProductPrice("Scanner") zwraca 2700.</li>
+  <li>Wywołanie getProductPrice("Droid") zwraca 400.</li>
+  <li> Wywołanie getProductPrice("Engine") zwraca null.</li>
+</ul>
+<script>
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+
+  function getProductPrice(productName) {
+    // Change code below this line
+
+    let productPrice = null;
+    for (const product of products) {
+      if (product.name === productName) {
+        // console.log(product.price);
+        productPrice = product.price;
+      }
+    }
+    return productPrice;
+    // Change code above this line
+  }
+
+  console.log(getProductPrice("Grip")); // 1200
+  console.log(getProductPrice("Radar")); // 1300
+  console.log(getProductPrice("Scanner")); // 2700
+
+</script>

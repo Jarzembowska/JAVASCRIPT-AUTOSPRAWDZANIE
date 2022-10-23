@@ -1,0 +1,30 @@
+<h1>SKROCONE WŁASCIOWŚCI - TEORIA</h1>
+<!-- TEORIA -->
+<!-- Czasami podczas tworzenia obiektu wartość właściwości musi być pobrana ze zmiennej lub parametru funkcji o tej samej nazwie co sama właściowość -->
+<!-- Składnia w poniższym przykładzie jest zbyt uciążliwa, ponieważ trzeba powielić nazwę właściwości i nazwę zmiennej przechowującą wymaganą wartość -->
+
+<!-- const name = "Henry Cibola";
+  const age = 25;
+
+  const user = {
+    name: name,
+    age: age,
+  };
+  console.log(user.name); // "Henry Cibola"
+  console.log(user.age); // 25 -->
+
+<!-- skrócona składnia właściwości (shorthand properties) rozwiązuje ten problem, umożliwiając użycie nazwy zmiennej jako nazwy właściwości i jej wartości jako wartości właściwości. -->
+
+<script>
+  const name = "Henry Cibola";
+  const age = 25;
+
+  const user = {
+    name,
+    age,
+  };
+
+  console.log(user.name); // "Henry Cibola"
+  console.log(user.age); // 25
+</script>
+<!-- Oznacza to że podczas deklarowania obiektu wystarczy podać tylko nazwę właściwości, a wartość zostanie pobrana ze zmiennej o tej samej nazwie -->

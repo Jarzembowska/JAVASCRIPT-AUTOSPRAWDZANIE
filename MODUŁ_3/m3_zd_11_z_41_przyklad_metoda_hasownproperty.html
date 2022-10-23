@@ -1,0 +1,50 @@
+<h1>METODA HASOWNPROPERTY()</h1>
+<!-- TEORIA -->
+<!-- Przeanalizujmy pojęcie własnych i dziedziczonych właściwości obiektu i nauczmy się poprawnie używać pętli FOR...IN -->
+<!-- 
+  <script>
+   const animal = {
+     legs: 4,
+   };
+   const dog = Object.create(animal);
+   dog.name = "Mango";
+
+   console.log(dog); // {name: "Mango"}
+   console.log(dog.name); // "Mango"
+   console.log(dog.legs); // 4
+ </script> 
+-->
+<!-- Metoda Object.create(animal) tworzy i zwraca nowy obiekt, wiążąc do z obiektem animal.
+Dlatego możesz uzyskać watość właściwości  legs,
+odnosząc się do niej poprzez dog.legs , nawet jesli nie ma jej w obiekcie dog - jest to dziedziczona właściwość obiektu animal -->
+
+<!-- Operator IN , używany w pętli FOR...IN, nie rozróżnia własnych i dziedziczonych właściwości obiektu. Ta funkcja przeszkadza, ponieważ zawsze chcemy iterować tylko własne właściowości obiektu. Aby dowiedzieć się, czy obiekt ma własną właściowość, czy nie, użyj metody
+hasOwnProperty(key),
+która zwraca true lub false -->
+<!-- 
+  //  X Zwraca true dla wszystkich właściwości
+  console.log("name" in dog); // true
+  console.log("legs" in dog); // true
+
+  // Taki zapis zwraca tylko dla własnych właściwości
+  console.log(dog.hasOwnProperty("name")); // true
+  console.log(dog.hasOwnProperty("legs")); // false
+ -->
+<!-- Dlatego podczas iteracji pętli FOR...IN konieczne jest dodanie sprawdzenia własnej właściwości przy każdej iteracji.
+Nawet jeśli teraz mamy pewność, że obiekt nie ma dziedziczonych właściowości, uchroni to przed ewentualnymi błędami w przyszłości -->
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    genres: ["proza ​​historyczna", "przygody"],
+    rating: 8.38,
+  };
+  for (const key in book) {
+    // Jeśli to jest właściwość własna, wykonaj if body
+    if (book.hasOwnProperty(key)) {
+      console.log(key);
+      console.log(book[key]);
+    }
+    // Jeśli to nie jest właściwość własna, nie rób nic
+  };
+</script>

@@ -1,0 +1,31 @@
+<h1>DOSTĘP DO WŁAŚCIOWŚCI ZA POMOCĄ NAWIASÓW KWADRTAOWYCH - ZADANIE</h1>
+<!-- ZADANIE -->
+
+<!-- Uzupełnij kod, przypisując zadeklarowanym zmiennym wyrażenia umożliwiające dostęp do odpowiednich właściwości obiektu apartment przy użyciu składni „nawiasów kwadratowych”.
+
+aptRating - ocena;
+aptDescr - opis;
+aptPrice - cena;
+aptTags - tagi.
+ -->
+<script>
+  const apartment = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+  };
+  const aptRating = apartment["rating"];
+  console.log(aptRating); // 4
+
+  const aptDescr = apartment["descr"];
+  console.log(aptDescr); // Spacious apartment in the city center
+
+  const aptPrice = apartment["price"];
+  console.log(aptPrice); // 2153
+
+  const aptTags = apartment["tags"];
+  console.log(aptTags); // ["premium", "promoted", "top"]
+
+</script>

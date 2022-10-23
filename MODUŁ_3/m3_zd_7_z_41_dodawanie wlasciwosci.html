@@ -1,0 +1,38 @@
+<h1>DODAWANIE WŁAŚCIWOŚCI - ZADANIE</h1>
+<!-- ZADANIE -->
+<!-- Dodaj kilka nowych właściwości do obiektu apartment:
+
+area - powierzchnia w metrach kwadratowych, liczba 60;
+
+rooms - ilość pokoi, liczba 3;
+
+location - lokalizacja mieszkania, obiekt z następującymi właściwościami dołączonymi;
+country - kraj, ciąg "Jamaica";
+
+city - miasto, ciąg "Kingston". -->
+<script>
+  const apartment = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4.7,
+    price: 5000,
+    tags: ["premium", "promoted", "top", "trusted"],
+    owner: {
+      name: "Henry Sibola",
+      phone: "982-126-1588",
+      email: "henry.carter@aptmail.com",
+    },
+  };
+
+  apartment.area = 60;
+  apartment.rooms = 3;
+  apartment.location = {
+    country: "Jamaica",
+    city: "Kingston",
+  }
+
+  console.log(apartment.area); // 60
+  console.log(apartment.rooms); // 3
+  console.log(apartment.location.city); // "Kingston"
+  console.log(apartment.location.country); // Jamaica
+</script>

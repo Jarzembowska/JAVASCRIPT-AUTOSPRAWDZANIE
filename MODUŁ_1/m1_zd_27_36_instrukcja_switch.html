@@ -1,0 +1,62 @@
+<title>INSTRUKCJA SWITCH</title>
+
+<!-- switch (wartość){
+  
+        case wartość:
+        instrukcja;
+        break;
+
+        case wartość:
+        instrukcja;
+        break;
+} -->
+
+<!-- Jego składnia:
+- blok switch(wartość) - to co trzeba porównać
+oraz
+- ilość oddzielnych przypadków  case wratość: - to z czym trzeba porównać
+
+Dla porównania stosuje się operator ścisłej równości ===
+To znaczy, nie można porównac o więcej lub mniej, tylko równo.
+
+Wartość w bloku   switch(wartość) - łańcuch lub liczba, które
+porównuje się przy pomocy ścisłej róności z wszystkimi wartościami w blokach  case wartość: w porządku od góry do dołu.
+
+operator break w zakończeniu każdego blocku case jest niezbędny, aby przerwać dalsze sprawdzanie i przejść od razu do kodu za switch 
+w tym przypadku, gdy sprawdzenie pod względem równości zwróci TRUE
+ -->
+
+
+<!-- na początku w ciele funkcji była instrukcja
+if...else, która wyglądała następująco
+    if(type ==="starter")
+      price = 0;
+    } else if (type === "professional"){
+      price = 20;
+    } else if (type === "organization"){
+      price = 50;
+    }-->
+<script>
+  function getSubscripctionPrice(type) {
+    let price;
+
+    switch (type) {
+      case 'professional':
+        price = 20;
+        break;
+
+      case 'organization':
+        price = 50;
+        break;
+
+      case 'starter':
+        price = 0;
+        break;
+    }
+    return price;
+  }
+  console.log(getSubscripctionPrice("professional"));
+  console.log(getSubscripctionPrice("organization"));
+  console.log(getSubscripctionPrice("starter"));
+
+</script>

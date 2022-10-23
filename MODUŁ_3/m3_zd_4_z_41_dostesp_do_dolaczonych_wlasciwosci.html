@@ -1,0 +1,47 @@
+<h1>DOSTĘP DO DOŁĄCZONYCH WŁAŚCIWOŚCI - ZADANIE</h1>
+<!-- ZADANIE -->
+<!-- Uzupełnij kod, przypisując zadeklarowanym zmiennym wyrażenia odwołania się do odpowiednich właściwości obiektu apartment.
+
+ownerName - imię właściciela;
+
+ownerPhone - telefon właściciela;
+
+ownerEmail - poczta właściciela;
+
+numberOfTags - liczba elementów tablicy we właściwości tags;
+
+firstTag - pierwszy element tablicy we właściwości tags;
+
+lastTag - ostatni element tablicy we właściwości tags; -->
+<script>
+  const apartment = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+    owner: {
+      name: "Henry",
+      phone: "982-126-1588",
+      email: "henry.carter@aptmail.com",
+    },
+  };
+  const ownerName = apartment.owner.name;
+  console.log(ownerName); // Henry
+
+  const ownerPhone = apartment.owner.phone;
+  console.log(ownerPhone); //"982-126-1588"
+
+  const ownerEmail = apartment.owner.email;
+  console.log(ownerEmail); //"henry.carter@aptmail.com"
+
+  const numberOfTags = apartment.tags.length;
+  console.log(numberOfTags); // 3
+
+  const firstTag = apartment.tags[0];
+  console.log(firstTag); // "premium"
+
+  const lastTag = apartment.tags[numberOfTags - 1];
+  console.log(lastTag);
+
+</script>

@@ -1,0 +1,25 @@
+<h1>DOSTĘP DO WŁAŚCIWOŚCI ZA POMOCĄ KROPKI - TEORIA</h1>
+<!-- Pierwszym sposobem uzyskania dostępu do właściwości obiektu jest składnia
+obiekt.klucz_właściwości.
+Składnia za pomocą kropki jest używana w większości przypadków i jest odpowiednia, gdy znamy z góry nazwę (klucz) właściwości, do której chcemy uzyskać dostęp. -->
+<!-- Wartość właściwości o tej samej nazwie zostanie zwrócona do miejsca wywałania -->
+<!-- Jeśli w obiekcie nie ma właściwości o tej samej nazwie zostanie zwrócony komunikat-
+undefined -->
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    generes: ["proza historyczna", "przygody"],
+    public: true,
+    rating: 8.38,
+  };
+
+  const bookTitle = book.title;
+  console.log(bookTitle); // "Ostatnie królestwo"
+
+  const bookGeneres = book.generes;
+  console.log(bookGeneres); // ["proza historyczna", "przygody"]
+
+  const bookPrice = book.price;
+  console.log(bookPrice); // undefined
+</script>

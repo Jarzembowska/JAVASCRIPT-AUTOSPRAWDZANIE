@@ -1,0 +1,45 @@
+<h1>ZMIANA WARTOŚCI WŁAŚCIWOŚCI - ZADANIE</h1>
+<!-- ZADANIE -->
+
+<!-- Uzupełnij kod, zmieniając wartości właściwości obiektu apartment:
+
+cenę we właściwości price na 5000;
+
+ocenę mieszkania we właściwości rating na 4.7;
+
+imię i nazwisko właściciela w dołączonej właściwości name na "Henry Sibola";
+
+tablicę tagów we właściwości tags przez dodanie na końcu ciągu "trusted". -->
+
+<script>
+  const apartment = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+    owner: {
+      name: "Henry",
+      phone: "982-126-1588",
+      email: "henry.carter@aptmail.com",
+    },
+  };
+
+  apartment.price = 5000;
+  apartment.rating = 4.7;
+  apartment.owner.name = "Henry Sibola";
+  apartment.tags.push("trusted");
+
+  const aptPrice = apartment.price;
+  console.log(aptPrice); // 5000
+
+  const aptRating = apartment.rating;
+  console.log(aptRating); // 4.7
+
+  const aptOwnerName = apartment.owner.name;
+  console.log(aptOwnerName); // "Henry Sibola"
+
+  const aptTags = apartment.tags;
+  console.log(aptTags); // ["premium", "promoted", "top", "trusted"]
+
+</script>

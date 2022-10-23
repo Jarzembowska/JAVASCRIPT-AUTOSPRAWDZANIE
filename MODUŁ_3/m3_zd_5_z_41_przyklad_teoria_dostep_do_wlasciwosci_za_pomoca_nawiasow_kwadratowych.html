@@ -1,0 +1,33 @@
+<h1>DOSTĘP DO WŁAŚCIWOŚCI ZA POMOCĄ NAWIASÓW KWADRTAOWYCH - TEORIA</h1>
+<!-- TEORIA -->
+<!-- Drugim sposobem uzyskania dostępu do właściwości obiektu jest składnia 
+obiekt["klucz_właściowości"]
+Jest podobna do odwołania się do elementu tablicy, z tą różnicą, że nawiasy wskazują nie indeks elemntu, ale nazwę jako ciąg -->
+
+<!-- Znacznie rzadziej używana jest składnia
+"nawiasów kwadratowych". Z reguły w przypadkach, gdy nazwa właściwości nie jest z góry znana lub
+jest zapisana w zmiennej (np. jako wartość parametru funkcji)  -->
+
+<!-- Wartość właściowści o tej samej nazwie zostanie zwrócona do miejsca wywołania -->
+
+<!-- Jeśli obiekt nie podsiada właściowści o tej samej nazwie, do miejsca wywołania zostanie zwrócony komunikat undefined -->
+
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    genres: ["proza ​​historyczna", "przygody"],
+    public: true,
+    rating: 8.38,
+  };
+
+  const bookTitle = book["title"];
+  console.log(bookTitle); //"Ostatnie królestwo"
+
+  const bookGeneres = book["genres"];
+  console.log(bookGeneres); // ["proza historyczna", "przygody"]
+
+  const propKey = "author";
+  const bookAuthor = book[propKey];
+  console.log(bookAuthor); // Bernard Cornwell
+</script>

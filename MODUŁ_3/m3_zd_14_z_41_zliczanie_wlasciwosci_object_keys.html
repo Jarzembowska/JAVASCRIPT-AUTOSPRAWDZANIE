@@ -1,0 +1,41 @@
+<h1>ZADANIE. LICZENIE WŁASCIWOŚCI 2.0</h1>
+<H5>ZADANIE</H5>
+<p>Refaktoryzuj funkcję countProps(object) za pomocą metody Object.keys() i opcjonalnie, ale niekoniecznie, pętli
+  for...of.</p>
+<h5>TESTY</h5>
+<UL>
+  <li>Zadeklarowana jest funkcja countProps(object)</li>
+  <li>Wywołanie countProps({}) zwraca 0</li>
+  <li>Wywołanie countProps({ name: "Mango", age: 2 }) zwraca 2</li>
+  <li> Wywołanie countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) zwraca 3</li>
+  <li>Funkcja zlicza tylko własne właściwości obiektu</li>
+  <li> Funkcja używa metody Object.keys() i prawdopodobnie pętli for...of</li>
+</UL>
+<script>
+  function countProps(object) {
+    // Change code below this line
+    let propCount = 0;
+
+    // PIERWSZY SPOSÓB
+    // const keys = Object.keys(object);
+    // for (const key in keys) {
+    //   if (keys.hasOwnProperty(key)) {
+    //     propCount += 1;
+    //   }
+    // }
+
+    // DRUGI SPOSÓB
+    // ponieważ metoda Object.keys(object), zwraca nam tylko właściwości należące do object, nie musimy 
+    // już sprawdzać czy właściwości należą do obiekt, więc bez IF keys.hasOwnProperty(key)
+    // mozemy odrazu zliczać ich ilość
+    const keys = Object.keys(object);
+    for (const key of keys) {
+      propCount += 1;
+
+    }
+    return propCount;
+    // Change code above this line
+  };
+  console.log(countProps({})); // []
+  console.log(countProps({ name: "Mango", age: 2 })); // 2
+</script>

@@ -1,0 +1,46 @@
+<h1>DESTRUKTYRZACJA OBIEKTÓW</h1>
+<h5>TEORIA</h5>
+<p>Złożone dane są zawsze reprezentowane jako obiekt</p>
+<p>Wielokrotne wywołania właściwości obiektu wizualnie zanieczyszczają kod</p>
+
+<!-- 
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    genres: ["proza ​​historyczna", "przygody"],
+    public: true,
+    rating: 8.38,
+  };
+  const accessType = book.public ? "publicznym" : "zamkniętym";
+  const message = `Książka ${book.title} autorstwa ${book.author} z oceną ${book.rating} jest w dostępie ${accessType}.`;
+  console.log(message);
+</script> 
+-->
+
+<p>DESTRUKTURYZACJA umożliwia "rozpakowanie" wartości właściwości obiektu do zmiennych lokalnych.</p>
+<p>Dzięki temu kod w miejscu ich użycia jest mniej "szumny"</p>
+
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    genres: ["proza ​​historyczna", "przygody"],
+    public: true,
+    rating: 8.38,
+  };
+  // Destruktyrazacja
+
+  const { title, author, public, rating, coverImage } = book;
+  console.log(coverImage); // undefined
+
+  const accessType = public ? "publiczny" : "zamkniety";
+  const message = `Ksiazka ${title} autorstwa ${author} z oceną ${rating} jest w dostępie ${accessType}.`;
+  console.log(message);
+</script>
+
+<p>DESTRUKTURYZACJA zawsze znajduje się po lewej stronie operacji przypisania.</p>
+<p>Zmiennym wewnatrz nawiasów klamrowych przypisane sa wartości właściwości obiektu.</p>
+<p>Jeśli nazwa zmiennej i nazwa właściwości są takie same, to przypisanie ma miejsce, w przeciwnym przypadku zostanie mu
+  przypisane undefined.</p>
+<p>kolejność, w jakiej zmienne są deklarowane w nawiasach klamrowych, nie ma znaczenia.</p>

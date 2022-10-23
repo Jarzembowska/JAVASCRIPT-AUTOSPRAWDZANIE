@@ -1,0 +1,19 @@
+<h1>METODA OBJECT.VALUES()</h1>
+<H5>TEORIA</H5>
+<p> Jeśli metoda Object.keys(obj) zwraca tablicę kluczy własnych właściwości, to </p>
+<p>metoda Object.values(obj) - zwraca tablicę wartości jej własnych właściwości</p>
+<p> Jeśli obiekt nie ma właściowości, metoda Object.values(obj)</p>
+<p>zwróci pustą tablicę</p>
+<p>Tablicę wartości można również iterować za pomocą pętli FOR...OF, aby uzyskać całkowitą sumę wartości liczbowych</p>
+<script>
+  const book = {
+    title: "Ostatnie królestwo",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  };
+  const keys = Object.keys(book);
+  console.log(keys); //["title", "author", "rating"]
+
+  const values = Object.values(book);
+  console.log(values); // ["Ostatnie królestwo", "Bernard Cornwell", 8.38]
+</script>

@@ -1,0 +1,36 @@
+<h1>ZMIANA NAZWY ZMIENNEJ - TEORIA</h1>
+<h5>TEORIA</h5>
+<p>Podczas destrukturyzacji możesz zmienić nazwę zmiennej, do której rozpakowana jest wartość właściwości.</p>
+<p>Najpierw piszemy nazwę właściwości, z której chcemy uzyskać wartość, po czym wstawiamy dwukropek " : "</p>
+<p> i wpisujemy nazwę zmiennej, do której musisz podać wartość tej właściwości.</p>
+
+<script>
+  const firstBook = {
+    title: "Ostatnie królestwo",
+    coverImage: "https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg",
+  };
+
+  const {
+    title: firstTitle,
+    coverImage: firstCoverImage = "https://via.placeholder.com/640/480",
+  } = firstBook;
+
+  // Taki zapis brzmi "Utwórz zmienną" firstTitle, w której należy umieścić wartość title z obiektu firstBook itd.
+
+  console.log(firstTitle); // Ostatnie królestwo
+  console.log(firstCoverImage); // // https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg
+
+  const secondBook = {
+    title: "Sen śmiesznego człowieka",
+  };
+
+  const {
+    title: secondTitle,
+    coverImage: secondCoverImage = "https://via.placeholder.com/640/480",
+  } = secondBook;
+
+  console.log(secondTitle); // Sen śmiesznego człowieka
+  console.log(secondCoverImage); // "https://via.placeholder.com/640/480"
+
+
+</script>

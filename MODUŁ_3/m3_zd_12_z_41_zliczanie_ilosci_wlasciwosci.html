@@ -1,0 +1,43 @@
+<h1>ZADANIE:LICZENIE WŁAŚCIWOŚCI</h1>
+<!-- ZADANIE -->
+<!-- Napisz funkcję countProps(object) , która zlicza i zwraca liczbę własnych właściwosci obiektu w parametrze object.
+Użyj zmiennej propCount do przechowywania liczby właściowości obiektu -->
+
+<!-- TESTY -->
+<!-- 
+Zadeklarowana jest funkcja countProps(object)
+Wywołanie countProps({}) zwraca 0
+Wywołanie countProps({ name: "Mango", age: 2 }) zwraca 2
+Wywołanie countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) zwraca 3
+Funkcja oblicza tylko własne właściwości obiektu -->
+<script>
+  function countProps(object) {
+    let propCount = 0;
+    // Change code below this line
+
+    // PIERWSZY SPOSÓB ROZWIĄZANIA
+
+    // const keys = [];
+    // for (const key in object) {
+    //   if (object.hasOwnProperty) {
+    //     keys.push(key);
+    //   }
+    // }
+    // for (let i = propCount; i < keys.length; i++) {
+    //   propCount += 1;
+    // }
+
+    // DRUGI SPOSÓB ROZWIĄZANIA
+    for (const key in object) {
+      if (object.hasOwnProperty(key)) {
+        // propCount = propCount + 1;
+        propCount += 1;
+      }
+    }
+
+    // Change code above this line
+    return propCount;
+  }
+  console.log(countProps({}));
+  console.log(countProps({ name: "Mango", age: 2 }));
+</script>
