@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  METODA FLATMAP()
+  Metoda flatMap(callback) jest analogiczna do metody map(), ale stosuje się ją w wypadkach, gdy rezultat to
+  wielowymiarowa tablica, którą trzeba "wygładzić".
+
+  массив.flatMap((element, index, array) => {
+  // Ciało funkcji callback
+  });
+  Na tablicy students zapisana jest lista studentów z listą przedmiotów, na które uczęszcza student we właściwości
+  courses. Kilku studentów może chodzić na ten sam przedmiot. Należy stworzyć listę wszystkich przedmiotów, na które
+  uczęszcza ta grupa studentów, tymczasem także tych powtarzających się.
+
+  const students = [
+  { name: "Mango", courses: ["mathematics", "physics"] },
+  { name: "Poly", courses: ["science", "mathematics"] },
+  { name: "Kiwi", courses: ["physics", "biology"] },
+  ];
+
+  students.map(student => student.courses);
+  // [["mathematics", "physics"], ["science", "mathematics"], ["physics", "biology"]]
+
+  students.flatMap(student => student.courses);
+  // ["mathematics", "physics", "science", "mathematics", "physics", "biology"];
+  Wywołuje funkcję callback dla każdego elementu oryginalnej tablicy, a rezultat jej pracy zapisuje się na nowej
+  tablicy.
+  Różnica z map() polega na tym, że nowa tablica "wygładza się" na głębokość równą jednostce (jeden poziom). Ta
+  wygładzona
+  tablica jest rezultatem pracy flatMap().
+
+
+
+  <script>
+
+    //Wykorzystując metodę flatMap() spraw, aby w zmiennej genres otrzymać tablicę wszystkich gatunków książek (właściwość genres) z tablicy książek books.
+    const books = [
+      {
+        title: "The Last Kingdom",
+        author: "Bernard Cornwell",
+        genres: ["adventure", "history"],
+      },
+      {
+        title: "Beside Still Waters",
+        author: "Robert Sheckley",
+        genres: ["fiction"],
+      },
+      {
+        title: "Redder Than Blood",
+        author: "Tanith Lee",
+        genres: ["horror", "mysticism"],
+      },
+    ];
+    // Change code below this line
+
+    const genres = books.flatMap(book => book.genres);
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  METODA MAP() I TABLICA OBIEKTÓW
+  Wiemy już, że zadania powszednie to manipulacja tablicą obiektów. Na przykład otrzymanie tablicy wartości właściwości
+  ze
+  wszystkich obiektów. Istnieje tablica studentów, a trzeba stworzyć oddzielną tablicę ich imion.
+
+  const students = [
+  { name: "Mango", score: 83 },
+  { name: "Poly", score: 59 },
+  { name: "Ajax", score: 37 },
+  { name: "Kiwi", score: 94 },
+  { name: "Houston", score: 64 },
+  ];
+
+  const names = students.map(student => student.name);
+  console.log(names); // ["Mango", "Poly", "Ajax", "Kiwi", "Houston"]
+  Wykorzystując metodę map() można ziterować tablicę obiektów i w funkcji callback zwrócić wartość właściwości każdego z
+  nich.
+
+
+
+  <script>
+
+    //Wykorzystując metodę map() spraw, aby w zmiennej titles otrzymać tablicę tytułów książek (właściwość title) ze wszystkich obiektów tablicy books.
+
+    const books = [
+      {
+        title: "The Last Kingdom",
+        author: "Bernard Cornwell",
+        rating: 8.38,
+      },
+      {
+        title: "Beside Still Waters",
+        author: "Robert Sheckley",
+        rating: 8.51,
+      },
+      {
+        title: "The Dream of a Ridiculous Man",
+        author: "Fyodor Dostoevsky",
+        rating: 7.75,
+      },
+      { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+      { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+    ];
+    // Change code below this line
+
+    const titles = books.map(book => book.title);
+
+
+
+
+  </script>
+</body>
+
+</html>

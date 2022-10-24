@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="John Doe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goit</title>
+</head>
+
+<body>
+  METODA MAP()
+  Większość iterujących metod tablicy to czyste funkcje. Tworzą one nową tablicę, wypełniają ją, stosując do wartości
+  każdego elementu wskazaną funkcję callback, po czym zwracają tę nową tablicę.
+
+  Metoda map(callback) wykorzystywana jest dla transformowania tablicy. Wywołuje funkcję callback dla każdego elementu
+  oryginalnej tablicy, a rezultat jej działania zapisuje się na nowej tablicy, która będzie też rezultatem wykonania
+  metody.
+
+  tablica.map((element, index, array) => {
+  // Ciało funkcji callback
+  });
+  Iteruje oryginalną tablicę element po elemencie.
+  Nie zmienia oryginalnej tablicy.
+  Rezultat pracy funkcji callback zapisuje się na nowej tablicy.
+  Zwraca nową tablicę takiej samej długości.
+  Można ją wykorzystywać po to, aby zmienić każdy element tablicy. Oryginalna tablica wykorzystywana jest jako wzór, na
+  bazie którego można stworzyć nowy zbiór.
+
+  const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+
+  const planetsInUpperCase = planets.map(planet => planet.toUpperCase());
+  console.log(planetsInUpperCase); // ["EARTH", "MARS", "VENUS", "JUPITER"]
+
+  const planetsInLowerCase = planets.map(planet => planet.toLowerCase());
+  console.log(planetsInLowerCase); // ["earth", "mars", "venus", "jupiter"]
+
+  // Oryginalna tablica nie zmienia się
+  console.log(planets); // ["Earth", "Mars", "Venus", "Jupiter"]
+  Wykorzystywanie anonimowych funkcji strzałkowych z niejawnym zwrotem mocno skraca "szum" zadeklarowania funkcji
+  callback, czyniąc kod czystszym i łatwiejszym do przyjęcia.
+
+
+
+  <script>
+
+    //Uzupełnij kod tak, aby w zmiennej planetsLengths otrzymać tablicę długości nazw planet. Obowiązkowo wykorzystaj metodę map().
+
+    const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+    // Change code below this line
+    const planetsLengths = planets.map(planet => planet.length);
+
+
+  </script>
+</body>
+
+</html>
