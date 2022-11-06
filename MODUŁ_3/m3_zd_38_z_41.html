@@ -1,0 +1,30 @@
+<h1>ZADANIE: DODAJ NOWĄ MIKSTURĘ</h1>
+<h3>ZADANIE</h3>
+<!-- 
+  Uzupełnij metodę addPotion(potionName), aby ona dodawała miksturę potionName na końcu tablicy mikstur we właściwości potions.
+
+Zadeklarowana zmienna atTheOldToad
+
+Wartość zmiennej atTheOldToad to obiekt
+
+Wartość właściwości atTheOldToad.potions to tablica ["Speed potion", "Dragon breath", "Stone skin"]
+
+Wartość właściwości atTheOldToad.addPotion to metoda obiektu
+
+Po pierwszym wywołaniu metody atTheOldToad.addPotion("Invisibility"), właściwość potions będzie zawierać tablicę ["Speed potion", "Dragon breath", "Stone skin", "Invisibility"]
+
+Po drugim wywołaniu metody atTheOldToad.addPotion("Power potion"), właściwość potions będzie zawierać tablicę ["Speed potion", "Dragon breath", "Stone skin", "Invisibility", "Power potion"]
+ -->
+
+<script>
+  const atTheOldToad = {
+    potions: ["Speed potion", "Dragon breath", "Stone skin"],
+    addPotion(potionName) {
+      // Change code below this line
+
+      this.potions.push(potionName);
+
+      // Change code above this line
+    },
+  };
+</script>

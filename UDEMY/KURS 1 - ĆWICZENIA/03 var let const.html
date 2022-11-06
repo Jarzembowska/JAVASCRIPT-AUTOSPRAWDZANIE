@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var data = 10;
+    console.log(data);
+
+    // data = 10;
+    // console.log(data);
+
+    // let data;
+
+    // jeśli przypiszemy wartość zmiennej przed jej zadeklarowaniem czyli przed let data , lub jeśli będziemy chcieli się do niej odwołać poprzez np console.log()
+    // otrzymamy błąd ReferenceError: Cannot access 'data' before initialization
+
+    // poprawnie
+    let data1;
+    data1 = 10;
+    console.log(data);
+
+    let value = 10;
+    value = "test"; // możemy zmienić wartość na inną w consoli zmieni się na test
+    console.log(value);
+
+    const maxNumber = 1000;
+    console.log(maxNumber);
+
+    //gdybyśmy chcieli zmienić const otrzymamy błąd;
+    // maxNumber = 1001; // błąd
+  </script>
+</body>
+
+</html>

@@ -2,3 +2,72 @@
 <h5>TEORIA</h5>
 <p>Jeśli funkcja przyjmuje więcej niż dwa lub trzy argumenty, bardzo łatwo jest pomylić się co i w jakiej kolejności to
   przekazywać.</p>
+<p>Rezultatem jest nieoczekisty kod w miejscu jego wywołania</p>
+
+<script>
+  //function doStuffWithBook(title, numberOfPages, downloads, rating, public) {
+  // Robimy coś z parametrami
+  //   console.log(title);
+  //   console.log(numberOfPages);
+  //   console.log(downloads);
+  //   console.log(rating);
+  //   console.log(public);
+
+  // }
+
+  // ❌ Co to jest 736? Co to jest 10283? Co to jest true?
+  // doStuffWithBook("Ostatnie królestwo", 736, 10283, 8.38, true);
+
+  /* Wzorzec «Obiekt ustawień» pomaga rozwiązać ten problem, zastępując zestaw parametrów tylko jednym — obiektem o nazwanych właściwościach.*/
+
+  // function doStuffWithBook(book) {
+  //   // Robimy coś z właściwościami obiektu
+  //   console.log(book.title);
+  //   console.log(book.numberOfPages);
+  //   console.log(book.downloads);
+  //   console.log(book.rating);
+  //   console.log(book.public);
+
+  // }
+  /*Wtedy podczas wywołania przekazujemy jeden obiekt z niezbędnymi właściwościami.*/
+
+  // ✅ Wszystko jasne
+  // doStuffWithBook({
+  //   title: "Ostatnie królestwo",
+  //   numberOfPages: 736,
+  //   downloads: 10283,
+  //   rating: 8.38,
+  //   public: true,
+  // });
+
+  /*Kolejnym plusem jest to, że możesz zdestrukturyzować obiekt w parametrze book.*/
+
+  // Można to zrobić w ciele funkcji.
+  function doStuffWithBook(book) {
+    const { title, numberOfPages, downloads, rating, public } = book;
+    console.log(title);
+    console.log(numberOfPages);
+    console.log(downloads);
+    console.log(rating);
+    console.log(public);
+  }
+
+  // Lub w podpisie, bez różnicy.
+  function doStuffWithBook({ title, numberOfPages, downloads, rating, public }) {
+    console.log(title);
+    console.log(numberOfPages);
+    console.log(downloads);
+    console.log(rating);
+    console.log(public);
+  };
+
+  // ✅ Wszystko jasne
+  doStuffWithBook({
+    title: "Ostatnie królestwo",
+    numberOfPages: 736,
+    downloads: 10283,
+    rating: 8.38,
+    public: true,
+  });
+
+</script>

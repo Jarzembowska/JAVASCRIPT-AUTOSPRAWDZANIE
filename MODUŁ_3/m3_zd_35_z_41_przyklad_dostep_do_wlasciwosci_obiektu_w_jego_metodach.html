@@ -1,0 +1,220 @@
+<h1>DOSTĘP DO WŁAŚCIWOŚCI OBIEKTU W JEGO METODACH</h1>
+<h5>TEORIA</h5>
+<p>Metody służą do pracy z właściwościami obiektów i ich zmiany.</p>
+<p>Aby uzyskać dostęp do obiektu, metoda nie używa nazwy zmiennej, na przykład</p>
+<p>bookShelf, ale słowa kluczowego " this - kontekstu".</p>
+<p>Wartością this będzie obiekt przed punktem (kropką),</p>
+<p>czyli obiekt, który wywołał tę metodę, w naszym przypadku jest to</p>
+<p>link do obiektu bookShelf.</p>
+<!-- 
+<script>
+  const bookShelf = {
+    books: ["Ostatnie Królestwo"],
+    getBooks() {
+      console.log(this);
+    },
+  };
+
+  // Kropka jest poprzedzona obiektem bookShelf,
+  // więc kiedy metoda jest wywoływana, this będzie przechowywać link do niego.
+  bookShelf.getBooks(); // {books: ["Ostatnie Królestwo"], getBooks: f}
+
+</script> -->
+Aby uzyskać dostęp do właściwości obiektu w metodach,
+odwołujemy się do niego przez this, a następnie, jak zwykle, przez kropkę, do właściwości
+
+<script>
+  const bookShelf = {
+    books: ["Ostatnie Królestwo"],
+    getBooks() {
+      return this.books;
+    },
+    addBook(bookName) {
+      this.books.push(bookName);
+    },
+    removeBook(bookName) {
+      const bookIndex = this.books.indexOf(bookName);
+      this.books.splice(bookIndex, 1);
+    },
+  };
+
+  console.log(bookShelf.getBooks()); // ["Ostatnie Królestwo"]
+  bookShelf.addBook("Mgła");
+  bookShelf.addBook("Strażnicy snów");
+  console.log(bookShelf.getBooks()); // ["Ostatnie Królestwo", "Mgła", "Strażnicy snów"]
+  bookShelf.removeBook("Mgła");
+  console.log(bookShelf.getBooks()); // ["Ostatnie Królestwo", "Strażnicy snów"]
+</script>
+
+<p>Logicznie byłoby myśleć - dlaczego nie użyć nazwy obiektu podczas odwoływania się do właściwości, ponieważ wyraźnie
+  nie zamierzamy jej zmieniać. </p>
+<p>Chodzi o to, że nazwa obiektu nie jest wiarygodna, metody jednego obiektu można skopiować do innego (o innej nazwie),
+</p>
+<p>a w przyszłości przekonamy się, że często tworząc obiekt, w ogóle nie znamy nazwy z góry. Użycie this zapewnia, że
+  ​​metoda działa dokładnie na obiekcie, który ją wywołał.</p>
+
+<h3>Metoda indexOf()</h3>
+<h4>indexOf(value)</h4>
+<p>
+  indexOf(value) zwraca pierwszy indeks, pod którym znaleziono w tablicy element o wartości value lub liczbę -1, jeśli
+  takiego elementu nie ma, użyj indexOf, gdy potrzebujesz bezpośrednio uzyskać indeks elementu.
+</p>
+
+<p>
+  const clients = ["Mango", "Ajax", "Poly", "Kiwi"];<br>
+  console.log(clients.indexOf("Poly")); // 2 <br>
+  console.log(clients.indexOf("Monkong")); // -1 <br>
+</p>
+
+<h3>Metoda slice()</h3>
+<h4>slice(begin, end)</h4>
+
+<p>
+  slice(begin, end) zwraca nową tablicę zawierającą kopię części oryginalnej tablicy bez jej modyfikowania. Kopia jest
+  tworzona od begin do, ale bez end - indeksów elementów oryginalnej tablicy.
+</p>
+
+<p>
+  slice method
+  const clients = ["Mango", "Ajax", "Poly", "Kiwi"];<br>
+  console.log(clients.slice(1, 3)); // ["Ajax", "Poly"]<br>
+</p>
+
+<p>Jeśli begin i end nie są określone, zostanie utworzona kompletna kopia oryginalnej tablicy.</p>
+
+<p>
+  const clients = ["Mango", "Ajax", "Poly", "Kiwi"];<br>
+  console.log(clients.slice()); // ["Mango", Ajax", "Poly", "Kiwi"]<br>
+</p>
+
+<p>Jeśli nie określono end, kopiowanie będzie się odbywać od start do końca oryginalnej tablicy.</p>
+
+<p>
+  const clients = ["Mango", "Ajax", "Poly", "Kiwi"];<br>
+  console.log(clients.slice(1)); // ["Ajax", "Poly", "Kiwi"]<br>
+  console.log(clients.slice(2)); // ["Poly", "Kiwi"]<br>
+</p>
+
+<p>Jeśli wartość start jest ujemna, a end nie jest określona, to ostatnie elementy start zostaną skopiowane</p>
+
+<p>
+  const clients = ["Mango", "Ajax", "Poly", "Kiwi"];<br>
+  console.log(clients.slice(-2)); // ["Poly", "Kiwi"]<br>
+</p>
+
+<h3>Metoda splice()</h3>
+<p>
+  Szwajcarski nóż do pracy z tablicami, jeśli oryginalna tablica wymaga modyfikacji, usuwa, dodaje i zastępuje elementy
+  w
+  dowolnym miejscu tablicy.
+</p>
+<h4>Usuwanie</h4>
+
+<p>Aby usunąć elementy z tablicy, przekazywane są dwa argumenty.</p>
+
+<h4>splice(position, num)</h4>
+
+<ul>
+  <li>position - wskazuje pozycję (indeks) pierwszego elementu do usunięcia</li>
+  <li>num - określa liczbę usuniętych elementów</li>
+  <li>
+    Metoda splice modyfikuje oryginalną tablicę i zwraca tablicę zawierającą usunięte elementy. Na przykład mamy tablicę
+    ocen zawierającą pięć liczb od 1 do 5.
+  </li>
+</ul>
+
+<p>const scores = [1, 2, 3, 4, 5];</p>
+
+<p>
+  // Usuń trzy elementy tablicy, zaczynając od pierwszego elementu (indeks 0)<br>
+  const deletedScores = scores.splice(0, 3); <br>
+</p>
+
+<p>
+  // Tablica scores zawiera teraz dwa elementy<br>
+  console.log(scores); // [4, 5]<br>
+</p>
+
+<p>
+  // Tablica deletedScores zawiera trzy usunięte elementy
+  console.log(deletedScores); // [1, 2, 3]
+</p>
+
+
+<!-- Rysunek przedstawia wywołanie metody score.splice(0, 3) z przykładu. -->
+<h6>splice remove</h6>
+<p>
+
+<h6>INTERESUJĄCE</h6>
+W praktyce wartość zwracana (tablica usuniętych elementów) jest rzadko używana. Zasadniczo wystarczy usunąć elementy z
+tablicy.
+</p>
+
+<h4>Dodawanie</h4>
+Aby dodać jeden lub więcej elementów do tablicy, należy przekazać trzy lub więcej argumentów, a drugi argument musi być
+równy zero.
+
+<h4>
+  splice(position, 0, new_element_1, new_element_2, ...)
+</h4>
+
+<ul>
+  <li>Argument position określa pozycję początkową w tablicy, w której zostaną wstawione nowe elementy.</li>
+  <li>Drugi argument to zero, mówi metodzie, aby nie usuwała elementów w miejscu dodawania nowych.</li>
+  <li>Trzeci, czwarty i wszystkie kolejne argumenty to nowe elementy dodawane do tablicy.</li>
+  <li>Na przykład mamy tablicę nazw kolorów. Dodajmy nowy kolor przed elementem o indeksie 2.</li>
+</ul>
+
+<h5>const colors = ["red", "green", "blue"];</h5>
+
+<p>
+  colors.splice(2, 0, "purple");<br>
+  console.log(colors); // ["red", "green", "purple", "blue"]<br>
+</p>
+
+<!-- Rysunek przedstawia wywołanie metody colors.splice(2, 0, 'purple') z przykładu. -->
+
+<h6>splice insert</h6>
+<p>Możesz dodać dowolną liczbę elementów, przekazując czwarty, piąty argument i tak dalej.</p>
+
+<h5>const colors = ["red", "green", "blue"];</h5>
+
+<p>
+  colors.splice(1, 0, "yellow", "pink");<br>
+  console.log(colors); // ["red", "yellow", "pink", "green", "blue"]<br>
+</p>
+
+<h4>Zamiana</h4>
+<p>
+  Zamiana to operacja dodawania, w której elementy są usuwane w momencie dodawania nowych. <br>
+  Aby to zrobić, musisz przekazać co najmniej trzy argumenty. <br>
+  Liczba elementów usuniętych i dodanych może nie być taka sama.<br>
+</p>
+
+<h4>splice(position, num, new_element_1, new_element_2, ...)</h4>
+
+<ul>
+  <li>position - wskazuje pozycję (indeks) pierwszego elementu do usunięcia</li>
+  <li>num - określa liczbę usuniętych elementów</li>
+  <li>Trzeci, czwarty i wszystkie kolejne argumenty to nowe elementy dodawane do tablicy.</li>
+  <li>Na przykład mamy tablicę języków programowania składającą się z czterech elementów.</li>
+</ul>
+
+<h4>const languages = ["C", "C++", "Java", "JavaScript"];</h4>
+
+<p>
+  // Zmieniamy element o indeksie 1 na nowy<br>
+  languages.splice(1, 1, "Python");<br>
+  console.log(languages); // ["C", "Python", "Java", "JavaScript"]<br>
+</p>
+
+<p>
+  // Zmieniamy jeden element (z indeksem 2) na kilka<br>
+  languages.splice(2, 1, "C#", "Swift", "Go");<br>
+  console.log(languages); // ["C", "Python", "C#", "Swift", "Go", "JavaScript"]<br>
+</p>
+
+
+<!-- Rysunek przedstawia wywołanie metody languages.splice(1, 1, 'Python') z przykładu. -->
+
+<h6>splice replace</h6>

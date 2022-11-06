@@ -1,0 +1,45 @@
+<h1>OPERACJA REST DO ZEBRANIA WSZYSTKICH ARGUMENTÓW FUNKCJI</h1>
+
+<h5>ZADANIE</h5>
+
+<p>Korzystając z operacji rest, uzupełnij kod funkcji add(),</p>
+<p>aby przyjmowała dowolną liczbę argumentów, odczytywała i zwracała ich sumę.</p>
+
+<h5>
+  <ul>
+    <li>Zadeklarowana funkcja add</li>
+    <li>Funkcja add używa parametru args</li>
+    <li>Aby zebrać argumenty do zmiennej args, w podpisie funkcji używa się składni ... (operator rest)</li>
+    <li>Wywołanie add(15, 27) zwraca 42</li>
+    <li>Wywołanie add(12, 4, 11, 48) zwraca 75</li>
+    <li>Wywołanie add(32, 6, 13, 19, 8) zwraca 78</li>
+    <li>Wywołanie add(74, 11, 62, 46, 12, 36) zwraca 241</li>
+  </ul>
+
+</h5>
+
+<script>
+  //kod przed zmianą
+  // Change code below this line
+  function add() {
+
+    // Change code above this line  
+  };
+
+
+  // Change code below this line
+  function add(...args) {
+    let sum = 0;
+    for (const arg of args) {
+      sum += arg;
+    }
+    return sum;
+    // Change code above this line
+  }
+  console.log(add(15, 27)); // 42
+  console.log(add(12, 4, 11, 48)); // 75
+  console.log(add(32, 6, 13, 19, 8)); // 78
+  console.log(add(74, 11, 62, 46, 12, 36)); // 241
+
+
+</script>

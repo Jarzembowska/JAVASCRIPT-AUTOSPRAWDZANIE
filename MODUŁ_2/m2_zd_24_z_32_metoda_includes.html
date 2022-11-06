@@ -1,4 +1,47 @@
 <h1>Metod includes ( )</h1>
+Metoda includes()
+includes(value) sprawdza, czy w tablicy znajduje się element z wartością value i zwraca odpowiednio true lub false.
+Zakres użycia tej metody sprowadza się do sytuacji, w których konieczne jest sprawdzenie, czy w tablicy znajduje się
+element, a jego pozycja (indeks) nie jest istotna.
+
+const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
+console.log(clients.includes("Poly")); // true
+console.log(clients.includes("Monkong")); // false
+
+Sprawdzanie wielu warunków za pomocą includes()
+Na pierwszy rzut oka kod poniższego przykładu wygląda dobrze.
+
+const fruit = "apple";
+
+if (fruit === "apple" || fruit === "strawberry") {
+console.log("It is a red fruit!");
+}
+
+Co jednak, jeśli mamy więcej czerwonych owoców, takich jak wiśnie (cherry) lub żurawiny (cranberries)? Czy rozszerzymy
+warunek za pomocą dodatkowych ||?
+
+const fruit = "apple";
+
+if (
+fruit === "apple" ||
+fruit === "strawberry" ||
+fruit === "cherry" ||
+fruit === "cranberries"
+) {
+console.log("It is a red fruit!");
+}
+
+Warunek możemy przepisać za pomocą metody includes(), jest to bardzo proste i skalowalne.
+
+// Przenieś opcje do tablicy
+const redFruits = ["apple", "strawberry", "cherry", "cranberries"];
+const fruit = "cherry";
+// Sprawdź, czy element jest obecny
+const hasFruit = redFruits.includes(fruit);
+
+if (hasFruit) {
+console.log(`${fruit} is a red fruit!`);
+}
 <script>
   function checkFruit(fruit) {
     const fruits = ["apple", "plum", "pear", "orange"];

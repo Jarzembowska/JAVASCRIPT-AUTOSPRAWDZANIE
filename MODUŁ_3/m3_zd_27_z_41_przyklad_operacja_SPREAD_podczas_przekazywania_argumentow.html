@@ -1,0 +1,35 @@
+<h1>OPERACJA SPREAD PODCZAS PRZEKAZYWANIA ARGUMENTÓW</h1>
+
+<h5>ZADANIE</h5>
+
+<P>Zmienna scores przechowuje tablicę wyników testów. Używając rozkładania i metod Math.max() i Math.min(),</P>
+
+<p>uzupełnij kod tak, aby zmienna bestScore miała najwyższy wynik, natomiast worstScore miała najniższy.</P>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana jest zmienna scores</li>
+  <li>Wartość zmiennej scores to tablica [89, 64, 42, 17, 93, 51, 26]</li>
+  <li>Zadeklarowana jest zmienna bestScore</li>
+  <li>Wartość zmiennej bestScore to liczba 93</li>
+  <li>Zadeklarowana jest zmienna worstScore</li>
+  <li>Wartość zmiennej worstScore to liczba 17</li>
+  <li>Do przekazywania argumentów do metody Math.max() używana jest składnia ... w tablicy scores</li>
+  <li> Do przekazywania argumentów do metody Math.min() używana jest składnia ... w tablicy scores</li>
+</ul>
+
+<script>
+
+  // Kod przed zmianą
+  const scores = [89, 64, 42, 17, 93, 51, 26];
+  // Change code below this line
+  // const bestScore = scores;
+  // const worstScore = scores;
+
+  // Kod po zmianie
+  const bestScore = Math.max(...scores);
+  const worstScore = Math.min(...scores);
+
+  console.log(bestScore); // 93
+  console.log(worstScore); // 17
+</script>

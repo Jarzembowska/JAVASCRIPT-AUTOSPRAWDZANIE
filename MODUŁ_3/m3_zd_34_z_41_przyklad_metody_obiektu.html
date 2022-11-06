@@ -1,0 +1,26 @@
+<h1>METODY OBIEKTÓW</h1>
+<P>Do tej pory traktowaliśmy obiekty tylko jako magazyn powiązanych ze sobą danych,</P>
+<p>na przykład informacji o książce itp. </p>
+<p>Obiekty pamięci masowej zwykle znajdują się w tablicy tych samych obiektów,</p>
+<p>które reprezentuje kolekcję podobnych elementów</p>
+<p>Obiekty mogą przechowywać nie tylko dane, ale także funkcje do pracy z tymi danymi - metody.</p>
+<p>Jeśli wartością właściwości jest funkcja, właściwość ta nazywana jest metodą obiektu.</p>
+
+<script>
+  // ✅ Logiczne i syntaktycznie pogrupowane encje
+  const bookShelf = {
+    books: ["Ostatnie królestwo", "Strażnicy snów"],
+    // To jest metoda obiektu
+    getBooks() {
+      console.log("Ta metoda zwróci wszystkie książki - właściwość books");
+    },
+    // To jest metoda obiektu
+    addBook(bookName) {
+      console.log("Ta metoda doda nową książkę do właściwości books");
+    },
+  };
+
+  // Wywołania metod
+  bookShelf.getBooks();
+  bookShelf.addBook("Nowa książka");
+</script>

@@ -1,0 +1,224 @@
+<h1>ZADANIE: POWIĘKSZENIE INWENTARZA</h1>
+<h3>ZADANIE</h3>
+
+Klient chce, aby każda mikstura była reprezentowana nie tylko nazwą, ale także ceną, a w przyszłości może mieć inne
+cechy. Dlatego teraz tablica obiektów o następujących właściwościach będzie przechowywana we właściwości potions.
+
+{
+name: "Dragon breath",
+price: 700
+}
+
+Refaktoryzuj metody obiektu atTheOldToad aby nie działały z tablica ciągów, ale z tablicą obiektów.
+<ul>
+  <li>
+    getPotions() - metoda na zdobycie wszystkich mikstur. Zwraca wartość właściwości potions.
+  </li>
+
+  <li>
+    addPotion(newPotion) - dodany potions newPotion (już obiekt) w tablicy właściwośći potions, nie tylko jeśli potions
+    jeszcze nie jest w tablicy. W przeciwnym razie zwracany jest ciąg.
+  </li>
+
+  <li>
+    removePotion(potionName) - usuwa obiekt mikstury o nazwie potionName z tablicy we właściwości potions.
+  </li>
+
+  <li>
+    updatePotionName(oldName, newName) - aktualizuje właściwość name obiektu-eliksiru z oldName do newName w tablicy
+    potions.
+  </li>
+
+  <li>
+    updatePotionName(oldName, newName) - aktualizuje właściwość name obiektu-eliksiru z oldName do newName w tablicy
+    potions.
+  </li>
+</ul>
+
+<h3>TESTY</h3>
+<ul>
+  <li>
+    Zadeklarowana zmienna atTheOldToad
+  </li>
+  <li>
+    Wartość zmiennej atTheOldToad to obiekt
+  </li>
+  <li>
+    Wartość właściwości atTheOldToad.getPotions to metoda obiektu
+  </li>
+  <li>
+    Wywołanie metody atTheOldToad.getPotions() na oryginalnym obiekcie zwraca [ { name: "Speed potion", price: 460 }, {
+    name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 } ]
+  </li>
+  <li>
+    Wartość właściwości atTheOldToad.addPotion to metoda obiektu.
+  </li>
+  <li>
+    Dla oryginalnego obiektu, po wywołaniu metody atTheOldToad.addPotion({ name: "Invisibility", price: 620 }), w
+    tablicy
+    potions ostatnim elementem będzie ten obiekt
+  </li>
+  <li>
+    Dla oryginalnego obiektu, po wywołaniu metody atTheOldToad.addPotion({ name: "Power potion", price: 270 }), w
+    tablicy
+    potions ostatnim elementem będzie ten obiekt
+  </li>
+
+  <li>
+    Jeśli dodany potions już jest w tablicy potions, metoda addPotion zwraca ciąg z tekstem z kodu źródłowego
+  </li>
+  <li>
+    Jeśli dodany potions już jest w tablicy potions, metoda addPotion nie dodaje do niego przekazanego obiektu
+  </li>
+  <li>
+    Dla oryginalnego obiektu po wywołaniu atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }), tablica potions
+    się nie zmienia
+  </li>
+  <li>
+    Dla oryginalnego obiektu po wywołaniu atTheOldToad.addPotion({ name: "Stone skin", price: 240 }), tablica potions
+    się
+    nie zmienia
+  </li>
+  <li>W przypadku oryginalnego obiektu wezwanie atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }), zwraca
+    ciąg
+    "Error! Potion Dragon breath is already in your inventory!"
+  </li>
+  <li>
+    W przypadku oryginalnego obiektu wezwanie atTheOldToad.addPotion({ name: "Stone skin", price: 240 }), zwraca ciąg
+    "Error! Potion Stone skin is already in your inventory!"
+  </li>
+  <li>
+    Wartość właściwości atTheOldToad.removePotion to metoda obiektu
+  </li>
+  <li>
+    Dla oryginalnego obiektu, po wywołaniu metody atTheOldToad.removePotion("Dragon breath"), właściwość potions będzie
+    zawierać tablicę [ { name: "Speed potion", price: 460 }, { name: "Stone skin", price: 520 } ]
+  </li>
+  <li>
+    Dla oryginalnego obiektu, po wywołaniu metody atTheOldToad.removePotion("Speed potion"), właściwość potions będzie
+    zawierać tablicę [ { name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 }]
+  </li>
+  <li>
+    Wartość właściwości atTheOldToad.updatePotionName to metoda obiektu
+  </li>
+  <li>
+    Dla oryginalnego obiektu, po wywołaniu metody atTheOldToad.updatePotionName("Dragon breath", "Polymorth"),
+    właściwość
+    potions będzie zawierać tablicę [{ name: "Speed potion", price: 460 }, { name: "Polymorth", price: 780 }, { name:
+    "Stone skin", price: 520 } ]
+  </li>
+  <li>
+    Dla oryginalnego obiektu, po wywołaniu metody atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"),
+    właściwość potions będzie zawierać tablicę [{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price:
+    780
+    }, { name: "Invulnerability potion", price: 520 } ]
+  </li>
+
+</ul>
+<script>
+  // const atTheOldToad = {
+  //   potions: [
+  //     { name: "Speed potion", price: 460 },
+  //     { name: "Dragon breath", price: 780 },
+  //     { name: "Stone skin", price: 520 },
+  //   ],
+  //   // Change code below this line
+  //   getPotions() {
+  //     return this.potions;
+  //   },
+  //   addPotion(newPotion) {
+  //     if (this.potions.includes(newPotion)) {
+  //       return `Error! Potion ${newPotion} is already in your inventory!`;
+  //     }
+
+  //     this.potions.push(newPotion);
+  //   },
+  //   removePotion(potionName) {
+  //     const potionIndex = this.potions.indexOf(potionName);
+
+  //     if (potionIndex === -1) {
+  //       return `Potion ${potionName} is not in inventory!`;
+  //     }
+
+  //     this.potions.splice(potionIndex, 1);
+  //   },
+  //   updatePotionName(oldName, newName) {
+  //     const potionIndex = this.potions.indexOf(oldName);
+
+  //     if (potionIndex === -1) {
+  //       return `Potion ${oldName} is not in inventory!`;
+  //     }
+  //     this.potions.splice(potionIndex, 1, newName);
+  //   },
+  //   // Change code above this line
+  // };
+
+
+  // Kod po zmianie
+  const atTheOldToad = {
+    potions: [
+      { name: "Speed potion", price: 460 },
+      { name: "Dragon breath", price: 780 },
+      { name: "Stone skin", price: 520 },
+    ],
+    // Change code below this line
+    getPotions() {
+      return this.potions;
+    },
+    addPotion(newPotion) {
+      for (const potion of this.potions) {
+        if (potion.name === newPotion.name) {
+          return `Error! Potion ${newPotion.name} is already in your inventory!`;
+        }
+      }
+      this.potions.push(newPotion);
+    },
+    removePotion(potionName) {
+      const array = [];
+      for (const potion of this.potions) {
+        array.push(potion.name);
+      }
+      const potionIndex = array.indexOf(potionName);
+      if (potionIndex === -1) {
+        return `Potion ${potionName} is not in inventory!`;
+      }
+      this.potions.splice(potionIndex, 1);
+    },
+    updatePotionName(oldName, newName) {
+      for (const potion of this.potions) {
+        if (potion.name === oldName) {
+          return potion.name = newName;
+        }
+      }
+    },
+    // Change code above this line
+  };
+
+  atTheOldToad.getPotions();
+  console.log(atTheOldToad.getPotions());
+  // (3) [{…}, {…}, {…}]
+  //  0: {name: 'Speed potion', price: 460}
+  //  1: {name: 'Dragon breath', price: 780}
+  //  2: {name: 'Stone skin', price: 520}
+  // length: 3
+
+  atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+  // 0: {name: 'Speed potion', price: 460}
+  // 1: {name: 'Dragon breath', price: 780}
+  // 2: {name: 'Stone skin', price: 520}
+  // 3: {name: 'Invisibility', price: 620}
+  // length: 4
+
+  atTheOldToad.removePotion("Speed potion");
+  // właściwość potions będzie zawierać tablicę
+  //  [ 0: {name: 'Dragon breath', price: 780}
+  //    1: {name: 'Stone skin', price: 520}
+  //    2: {name: 'Invisibility', price: 620} ]
+  //    length: 3 
+
+  atTheOldToad.updatePotionName("Dragon breath", "Polymorth");
+    // właściwość potions będzie zawierać tablicę
+    //[ { name: "Speed potion", price: 460 },
+    //  { name: "Polymorth", price: 780 },
+    //  { name: "Stone skin", price: 520 } ]
+</script>

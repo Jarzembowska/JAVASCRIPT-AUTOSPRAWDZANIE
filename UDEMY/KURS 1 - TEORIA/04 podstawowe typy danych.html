@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Podstawowe typy danych
+
+    // Na początek będziemy używali trzech podstawowych typów danych, które można przypisać do zmiennych
+
+    // liczby
+    let someInteger = 5; // liczba całkowita
+    let someDecimal = 3.2; // liczba dziesiętna
+
+    // tekst, piszemy w cudzysłowiu albo w apostrofach
+    let someString = "Witaj Świecie";
+    let otherString = 'Jakiś tekst';
+
+    // typy boolen, czyli true albo false
+    let messageSentFlag = false;
+    let applicationStarted = true;
+
+    // Tekst w wielu linijkach tylko za pomocą template literals
+    /*
+    let text = "tekst w cudzysłowiu nie może
+    być w wielu linijkach bo będzie błąd";
+    */
+
+    // ` to backtiki i tworzą template literals
+    let strMultiline = `Tekst
+    w wielu linijkach
+    jest super! `;
+    console.log(strMultiline); // w konsoli wyświetli nam ten tekst w kilku linijkach
+
+
+    // Tablice
+
+    /*
+    Tablica to kolekcja elementów, nie jest to osobny typ, ale obiekt.
+    Możemy ją traktować jako zmienną posiadającą w sobie zmienne, 
+    które łatwo możemy pobrać
+    */
+
+    // tworzymy tablicę i dodajemy od razu 4 elementy
+    let tab = [3, "tekst", 99, 12];
+
+    // indeks 0 = tab[0] = 3;
+    // indeks 1 = tab[1] = tekst;
+    // indeks 2 = tab[2] = 99;
+    // indeks 3 = tab[3] = 12;
+
+    //pobieramy elementy z tablicy podając numer indeksu
+    // indeksy liczone są od 0, zatem drugi element ma indeks 1
+    console.log(tab); // zwróci nam całą tablicę [3, 'tekst', 99, 12]
+    console.log("Drugi element tablicy: " + tab[1]); // zwróci nam drugi element tablicy  z indeksem 1, czyli wyświetli na konsoli - Drugi element tablicy: tekst
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    console.log("PĘTLA WHILE")
+    /*
+    PĘTLA WHILE
+    
+    Pętle pozwalają na wielokrotne wykonaie danego kodu
+    jeśli jest spełniony podany warunek
+    */
+    let i = 0; // wartość początkowa i = 0
+
+    while (i < 5) { // wartość w zmiennej i
+      // wyświetli aktualną wartość i
+      console.log("liczba i: " + i);
+      // z każdą iteracją zwiększamy
+      // i o jeden 
+      i = i + 1;
+      // inny zapis to 
+      // i += 1;
+    }
+    // pętla będzie się wykonywała aż do spełnienia warunku
+    // kiedy i będzie mniejsze od 5 kiedy
+    // i osiągnie 6 pętla się już nie wykona
+
+    // PĘTLA DO WHILE
+    console.log("PĘTLA DO WHILE");
+    /*
+      Petla do while różni się tym, że najpierw wykonywany jest kod w bloku i dopiero później sprawdzany jest warunek.
+      Żadko jest wykorzystywana w praktyce, ale warto jest ją znać
+    */
+    let j = 0;
+
+    do {
+      // wyświetli aktualną wartość i
+      console.log("liczba j: " + j);
+      // z każdą iteracją zwiększamy
+      // i o jeden
+      j = j + 1;
+    } while (j < 5);
+
+
+  // PĘTLA FOR
+  </script>
+</body>
+
+</html>

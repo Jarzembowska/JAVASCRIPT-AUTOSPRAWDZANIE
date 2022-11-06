@@ -1,0 +1,49 @@
+<h1>OPERACJA SPREAD PODCZAS TWORZENIA NOWEGO OBIEKTU</h1>
+<h5>ZADANIE</h5>
+W konstruktorze można tworzyć nowe testy, których domyślne ustawienia są przechowywane w zmiennej defaultSettings.
+Podczas tworzenia testu wszystkie lub część ustawień można nadpisać, są one przechowywane w zmiennej overrideSettings.
+
+Aby uzyskać ostateczne ustawienia testu, musisz wybrać ustawienia domyślne i zastosować na nich nadpisane ustawienia.
+Uzupełnij kod w ten sposób, aby zmienna finalSettings zawierała obiekt ostatecznych ustawień testu.
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana zmienna defaultSettings</li>
+  <li>Wartość zmiennej defaultSettings to obiekt</li>
+  <li>Zadeklarowana zmienna overrideSettings</li>
+  <li>Wartość zmiennej overrideSettings to obiekt</li>
+  <li>Zadeklarowana zmienna finalSettings</li>
+  <li>Wartość zmiennej finalSettings to obiekt</li>
+  <li>Wartość właściwości finalSettings.theme to "light"</li>
+  <li>Wartość właściwości finalSettings.public to "false"</li>
+  <li>Wartość właściwości finalSettings.withPassword to "true"</li>
+  <li>Wartość właściwości finalSettings.minNumberOfQuestions to 10</li>
+  <li>Wartość właściwości finalSettings.timePerQuestion to 30</li>
+  <li>Podczas przypisywania wartości zmiennej finalSettings używana jest składnia ...</li>
+
+</ul>
+
+
+<script>
+
+  const defaultSettings = {
+    theme: "light",
+    public: true,
+    withPassword: false,
+    minNumberOfQuestions: 10,
+    timePerQuestion: 60,
+  };
+
+  const overrideSettings = {
+    public: false,
+    withPassword: true,
+    timePerQuestion: 30,
+  };
+
+  // Change code below this line
+
+  const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+  console.log(finalSettings); // {theme: 'light', public: false, withPassword: true, minNumberOfQuestions: 10, timePerQuestion: 30}
+
+</script>

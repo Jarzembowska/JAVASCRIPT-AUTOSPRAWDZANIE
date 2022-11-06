@@ -1,0 +1,19 @@
+<h1>OPERACJA REST DO ZBIERANIA CZĘŚCI ARGUMENTÓW FUNKCJI</h1>
+
+<h5>TEORIA</h5>
+<p>Operacja ... (rest) umożliwia również zbieranie do tablicy tylko tej części argumentów, która jest potrzebna poprzez
+  zadeklarowanie parametrów przed „zbiorem”.</p>
+
+function multiply(firstNumber, secondNumber, ...otherArgs) {
+console.log(firstNumber); // Wartość pierwszego argumentu
+console.log(secondNumber); // Wartość drugiego argumentu
+console.log(otherArgs); // Tablica pozostałych argumentów
+}
+
+multiply(1, 2);
+multiply(1, 2, 3);
+multiply(1, 2, 3, 4);
+
+Wszystkie argumenty, dla których zostaną zadeklarowane parametry przekażą im swoje wartości, reszta argumentów zostanie
+umieszczona w tablicy. Operacja rest zbiera wszystkie pozostałe argumenty i dlatego musi iść na końcu w sygnaturze
+funkcji, w przeciwnym razie wystąpi błąd.

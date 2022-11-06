@@ -1,0 +1,81 @@
+<h1>METODY OBIEKTU</h1>
+<h5>ZADANIE</h5>
+<ul>
+  <li>Dodaj dwie dodatkowe metody do obiektu bookShelf, które na razie będą zwracały tylko ciągi przez analogię do
+    getBooks() i addBook(bookName).</li>
+  <li>Metoda removeBook(bookName) usunie książkę według tytułu. Zwraca ciąg "Deleting book < tytuł książki>, gdzie
+      < tytuł ksiązki> jest wartością parametru bookName.</li>
+  <li>Metoda updateBook(oldName, newName) zaktualizuje tytuł książki. Zwraca ciąg "Updating book < stary tytuł> to <
+        nowy tytuł> ", gdzie < stary tytuł> i < nowy tytuł> są wartościami parametrów oldName i newName odpowiednio.
+  </li>
+</ul>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana zmienna bookShelf</li>
+
+  <li>Wartością zmiennej bookShelf jest obiekt</li>
+
+  <li>Wartością właściwości bookShelf.getBooks jest metoda obiektu</li>
+
+  <li>Wywołanie metody bookShelf.getBooks() zwraca ciąg "Returning all books"</li>
+
+  <li>Wartością właściwości bookShelf.addBook jest metoda obiektu</li>
+
+  <li>Wywołanie metody bookShelf.addBook("Haze") zwraca ciąg "Adding book Haze"</li>
+
+  <li>Wartością właściwości bookShelf.removeBook jest metoda obiektu</li>
+
+  <li>Wywołanie metody bookShelf.removeBook("Red sunset") zwraca ciąg "Deleting book Red sunset"</li>
+
+  <li>Wartością właściwości bookShelf.updateBook jest metoda obiektu</li>
+
+  <li>Wywołanie metody bookShelf.updateBook("Sands of dune", "Dune") zwraca ciąg "Updating book Sands of dune to Dune"
+  </li>
+</ul>
+
+<script>
+  /*
+     // Kod przed zmianą
+     const bookShelf = {
+       // Change code below this line
+       books: ["The last kingdom", "The guardian of dreams"],
+       getBooks() {
+         return "Returning all books";
+       },
+       addBook(bookName) {
+         return `Adding book ${bookName}`;
+       },
+       // Change code above this line
+     };
+ */
+
+
+  // Kod po zmianie
+  const bookShelf = {
+    // Change code below this line
+    books: ["The last kingdom", "The guardian of dreams"],
+    getBooks() {
+      return "Returning all books";
+    },
+    addBook(bookName) {
+      return `Adding book ${bookName}`;
+    },
+
+    removeBook(bookName) {
+      return `Deleting book ${bookName}`;
+    },
+    updateBook(oldName, newName) {
+      return `Updating book ${oldName} to ${newName}`;
+    },
+
+    // Change code above this line
+  };
+  console.log(bookShelf.getBooks());
+  bookShelf.addBook();
+  console.log(bookShelf.addBook("Haze"));
+  console.log(bookShelf.removeBook("Red sunset"));
+  console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+  console.log(bookShelf);
+
+</script>

@@ -1,0 +1,71 @@
+<h1>ZADANIE - TABLICA DOPASOWAŃ</h1>
+
+<h5>ZADANIE</h5>
+
+<p>Funkcja findMatches() przyjmuje dowolną liczbę argumentów. Pierwszy argument zawsze będzie tablicą liczb, a pozostałe
+  argumenty będą tylko liczbami.</p>
+<p>Uzupełnij kod funkcji, aby zwracała nową tablicę matches, która będzie zawierać tylko te argumenty, zaczynając od
+  drugiego, które znajdują się w tablicy pierwszego argumentu.</p>
+<p>Na przykład findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) powinno zwrócić tablicę [1, 2], ponieważ tylko one znajdują się
+  w tablicy pierwszego argumentu.</p>
+
+<h5>TESTY</h5>
+
+<ul>
+  <li>Zadeklarowana funkcja findMatches()</li>
+  <li>Wywołanie findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) zwraca [1, 2]</li>
+  <li>Wywołanie findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2) zwraca [17, 89, 2]</li>
+  <li>Wywołanie findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41) zwraca [24, 9, 41]</li>
+  <li>Wywołanie findMatches([63, 11, 8, 29], 4, 7, 16) zwraca []</li>
+</ul>
+
+<script>
+  //Kod przed zmianą
+
+  // Change code below this line
+  function findMatches() {
+    const matches = []; // Don't change this line
+
+    // Change code above this line
+    return matches;
+  }
+
+  // Kod po zmianie
+  function findMatches(numbers, ...args) {
+    const matches = []; // Don't change this line
+    for (const arg of args) {
+      for (const number of numbers) {
+        if (number === arg) {
+          matches.push(number);
+        }
+      }
+    }
+    // Change code above this line
+    return matches;
+  }
+  console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7)); // [1, 2]
+  console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2)); // [17, 89, 2]
+  console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41)); //[24, 9, 41]
+  console.log(findMatches([63, 11, 8, 29], 4, 7, 16)); // []
+
+  /* Jeśli chcialibyśmy aby liczby w tablicy były zwracane w kolejności po przeszukaniu tablicy
+  nalezy w pętli zamienić kolejność przeszukiwania w taki sposób
+
+  function findMatches(numbers, ...args) {
+    const matches = []; // Don't change this line
+     for (const number of numbers) {
+      for (const arg of args) {
+        if (number === arg){
+          matches.push(number);
+        }
+      }
+    }
+    // Change code above this line
+    return matches;
+  }
+
+  console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7)); // [1, 2]
+  console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2)); // [89, 17, 2]
+  console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41)); //[24, 41, 9]
+  */
+</script>

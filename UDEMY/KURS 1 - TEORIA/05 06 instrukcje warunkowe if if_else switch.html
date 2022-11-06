@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Instrukcje warunkowe - if
+    console.log("INSTRUKCJA WARUNKOWA IF")
+    /*
+        Pozwalają na dodanie logiki do programów, sprawdzają warunek i jeżeli jest spełniony to wykonywany jest odpowiedni kod.
+    */
+
+    // Polecenie if działa następująco:
+    // jeżeli warunek jest spełniony, czyli ma wartość true
+    // to wykonywany jest kod w nawiasach klamrowych
+
+    if (5 > 2) {
+      console.log("5 większe od 2");
+    }
+
+    // > to operator porównania
+    // dostępne są inne jak <= (mniejsze równe), >=(większe równe), == (dokłądnie równe), != (nierówne) itd
+
+    /* W praktyce if sprawdza czy przekazany warunek jest prawdą lub fałszem,
+    czyli wartością boolowską, która może przyjąć tylko dwie wartości czyli true lub false.
+    W przypadku przekazanych liczb false to jest to samo co 0,
+    natomiast true to każda wartość nie będąca 0-em (zerem).
+    JavaScript w ten sposób konwertuje typy zmiennych z licz na boolean.
+    */
+
+    if (true) { // to to samo co 1, -2, "tekst"
+      console.log("prawda");
+    }
+    // jeśli mamy tylko jedną linijkę wykonani kodu możemy nie stosować nawiasów klamrowych
+    if (-2) console.log("-2 nie jest zerem, więc wyświetli tekst");
+    if (false) console.log("false zatem ten tekst nigdy się nie wyświetli");
+    if (0) console.log("0 traktowany jest również jak false, więc tekst się nie pokaże");
+
+
+    // INSTRUKCJE WARUNKOWE - IF ELSE
+    console.log("INSTRUKCJA WARUNKOWA IF ELSE")
+    /*
+      Jeżeli jest spełniony pierwszy warunek to wykonany jest kod w nawiasach klamrowycj po if.
+    */
+    let data = 4;
+
+    if (data <= 5) {
+      console.log("data mniejsze lub równe 5");
+    } else {
+      console.log("data ani mniejsze ani równe 5");
+    }
+    // wyświetli: data mniejsze lub równe 5
+
+    let data2 = 7;
+
+    if (data2 <= 5) {
+      console.log("data mniejsze lub równe 5");
+    } else {
+      console.log("data ani mniejsze ani równe 5");
+    }
+    // wyświeli: data ani mniejsze ani równe 5 bo warunek true po if nie jest spełniony daltego wykonuje się część po else
+
+    // INSTRUKCJE WARUNKOWE - IF ELSE IF
+    console.log("INSTRUKCJA WARUNKOWA IF ELSE IF")
+    /*
+      Można łączyć kilka instrukcji if else
+    */
+
+    let b = 8;
+
+    if (b == 3) {
+      console.log("b równe 3");
+    } else if (b == 7) {
+      console.log("b równe 7");
+    } else if (b == 8) {
+      console.log("b równe 8");
+    } else {
+      console.log("domyślny tekst jeśli inne warunki nie spełnione");
+    }
+    // w tym przypadku wyświetli się :  b równe 8
+
+
+    //KONSTRUKCJA SWITCH CASE
+    console.log("INSTRUKCJA SWITCH CASE")
+    /*
+      switch testuje czy podana zmienna równa się
+      wartościom w przypadkach
+      określonych w case,
+      break stosujemy aby wyjść z switch.
+  
+      default to domyślny kod gdy żaden
+      warunek nie jest spełniony.
+    */
+    let c = 7;
+    switch (c) {
+      case 3:
+        console.log("c równe 3");
+        break;
+      case 7:
+        console.log("c równe 7");
+        break;
+      case 8:
+        console.log("c równe 8");
+        break;
+      default:
+        console.log("domyślny tekst jeśli inne warunki nie są spełnione");
+    }
+   // wyświetli: c równe 7
+  </script>
+</body>
+
+</html>

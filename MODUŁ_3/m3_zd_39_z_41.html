@@ -1,0 +1,34 @@
+<h1>ZADANIE: USUŃ MIKSTURĘ</h1>
+<h3>ZADANIE</h3>
+<!-- 
+ Uzupełnij metodę removePotion(potionName) aby usunąć miksturę potionName z tablicy mikstur we właściwości potions.
+
+Zadeklarowana zmienna atTheOldToad
+
+Wartość zmiennej atTheOldToad to obiekt
+
+Wartość właściwości atTheOldToad.potions to tablica ["Speed potion", "Dragon breath", "Stone skin"]
+
+Wartość właściwości atTheOldToad.removePotion to metoda obiektu
+
+Po pierwszym wywołaniu metody atTheOldToad.removePotion("Dragon breath"), właściwość potions będzie zawierać tablicę ["Speed potion", Stone skin"]
+
+Po drugim wywołaniu metody atTheOldToad.removePotion("Speed potion"), właściwość potions będzie zawierać tablicę ["Stone skin"] 
+ -->
+
+
+
+<script>
+  const atTheOldToad = {
+    potions: ["Speed potion", "Dragon breath", "Stone skin"],
+    removePotion(potionName) {
+      // Change code below this line
+
+      const potionIndex = this.potions.indexOf(potionName);
+      this.potions.splice(potionIndex, 1);
+
+
+      // Change code above this line
+    },
+  };
+</script>

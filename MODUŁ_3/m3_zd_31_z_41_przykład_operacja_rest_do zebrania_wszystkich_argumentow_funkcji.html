@@ -1,0 +1,42 @@
+<h1>OPERACJA REST DO ZEBRANIA WSZYSTKICH ARGUMENTÓW FUNKCJI</h1>
+<h5>TEORIA</h5>
+<p>
+  Operacja ... (rest) umożliwia zebranie grupy niezależnych elementów do nowej kolekcji.
+</p>
+<p>
+  Syntaktycznie jest to bliźniak operacji rozkładania,
+</p>
+<p>
+  ale łatwo je rozróżnić - rozkładanie następuje, gdy ... najduje się po prawej stronie operacji</p>
+<p>
+  przypisania, a zbiór ma miejsce, gdy ... znajduje się po lewej stronie.
+</p>
+
+<p>Wróćmy do analogii z jabłkami. Jeśli na podłodze są jabłka i mamy puste pudełko, </p>
+<p>to operacja rest pozwoli nam „zbierać” jabłka do pudełka.</p>
+<p>W takim przypadku oryginalne jabłka pozostaną na podłodze, a w pudełku będzie kopia każdego jabłka.</p>
+
+<p>Jednym z zastosowań operacji rest jest tworzenie funkcji, które mogą przyjmować dowolną liczbę argumentów.</p>
+
+// Jak zadeklarować parametry funkcji tak,
+// aby można było przekazać dowolną liczbę argumentów?
+function multiply() {
+// ...
+}
+
+multiply(1, 2);
+multiply(1, 2, 3);
+multiply(1, 2, 3, 4);
+
+
+<script>
+  function multiply(...args) {
+    console.log(args); // tablica wszystkich argumentów
+  }
+  multiply(1, 2); //[1, 2];
+  multiply(1, 2, 3); // [1, 2, 3]
+  multiply(1, 2, 3, 4); // [1, 2, 3, 4]
+</script>
+
+<p>Nazwa parametru może być dowolna. Najczęściej nazywa się to args, restArgs lub otherArgs, co jest skrótem od
+  arguments.</p>

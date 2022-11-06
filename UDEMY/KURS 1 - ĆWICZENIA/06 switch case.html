@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let data = 15;
+
+    if (data == 0) {
+      console.log("data równe 0");
+    } else if (data == 1) {
+      console.log("data równe 1");
+    } else if (data == 3) {
+      console.log("data równe 3");
+    } else if (data == 5) {
+      console.log("data równe 5");
+    } else {
+      console.log("data równe jest dokładnie:", data);
+    }
+    console.log("INSTRUKCJA SWITCH CASE")
+    switch (data) {
+      case 0:
+        console.log("data równe jest 0");
+        break;
+      case 1:
+        console.log("data równe jest 1");
+        break;
+      case 3:
+        console.log("data równe jest 3");
+        break;
+      case 5:
+        console.log("data równe jest 5");
+        break;
+      default:
+        console.log("data równe jest dokładnie:", data);
+    }
+
+    /*
+      teperature z switch case
+      kilka przypadków case: -5, 0, 5, 15, 20
+      default: teperatura jest róna dokłądnie
+    */
+
+    let temperature = 21;
+    switch (temperature) {
+      case -5:
+        console.log("#1 teperatura równa jest:", temperature);
+        break;
+      case 0:
+        console.log("#2 teperatura równa jest:", temperature);
+        break;
+      case 5:
+        console.log("#3 teperatura równa jest:", temperature);
+        break;
+      case 15:
+        console.log("#4 teperatura równa jest:", temperature);
+        break;
+      case 20:
+        console.log("#5 teperatura równa jest:", temperature);
+        break;
+      default:
+        console.log("#6 temperatura jest równa dokładnie:", temperature);
+    }
+
+  </script>
+</body>
+
+</html>

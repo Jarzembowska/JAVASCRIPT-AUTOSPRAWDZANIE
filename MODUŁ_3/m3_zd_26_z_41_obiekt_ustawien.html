@@ -1,0 +1,66 @@
+<h1>WZORZEC <<OBIEKT USTAWIEŃ>></h1>
+<h5>ZADANIE</h5>
+
+Funkcja calculateMeanTemperature(forecast) przyjmuje jeden parametr forecast - obiekt temperatury na dwa dni następnego
+formatu.
+
+<p>{
+  today: { low: 10, high: 20 },
+  tomorrow: { low: 20, high: 30 }
+  }</p>
+
+Zastąp deklaracje zmiennych todayLow, todayHigh, tomorrowLow i tomorrowHigh jedną operacją destrukturyzacji właściwości
+obiektu forecast.
+
+<h5>TESTY</h5>
+<li>Zadeklarowana jest funkcja calculateMeanTemperature(forecast)</li>
+
+<li>Ciało funkcji wykorzystuje destrukturyzację obiektu</li>
+
+<li>Zmienna todayHigh jest deklarowana w ciele funkcji za pomocą destrukturyzacji</li>
+
+<li>Zmienna todayLow jest deklarowana w ciele funkcji za pomocą destrukturyzacji</li>
+
+<li>Zmienna tomorrowLow jest deklarowana w ciele funkcji za pomocą destrukturyzacji</li>
+
+<li>Zmienna tomorrowHigh jest deklarowana w ciele funkcji za pomocą destrukturyzacji</li>
+
+<li>Wywołanie calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }) zwraca 28.5</li>
+
+<li>Wywołanie calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }) zwraca 37</li>
+</ul>
+<script>
+  // Kod przed zmianą
+  // // Change code below this line
+  // function calculateMeanTemperature(forecast) {
+  //   const todayLow = forecast.today.low;
+  //   const todayHigh = forecast.today.high;
+  //   const tomorrowLow = forecast.tomorrow.low;
+  //   const tomorrowHigh = forecast.tomorrow.high;
+
+  //   // Change code above this line
+  //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+  // }
+  // console.log(calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } })); // 28.5
+  // console.log(calculateMeanTemperature({ today: { low: 37, high: 40 }, tomorrow: { low: 33, high: 38 } })); // 37
+
+  // calculateMeanTemperature({ today: { low: 37, high: 40 }, tomorrow: { low: 33, high: 38 } }); // to wpisane w konsoli zwróci nam wynik 37
+
+  // Kod po zmianie
+  function calculateMeanTemperature(forecast) {
+
+    const { today: { low: todayLow, high: todayHigh }, tomorrow: { low: tomorrowLow, high: tomorrowHigh } } = forecast;
+    // const todayLow = forecast.today.low;
+    // const todayHigh = forecast.today.high;
+    // const tomorrowLow = forecast.tomorrow.low;
+    // const tomorrowHigh = forecast.tomorrow.high;
+
+    // Change code above this line
+
+    return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+
+  }
+  console.log(calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } })); // 28.5
+  console.log(calculateMeanTemperature({ today: { low: 37, high: 40 }, tomorrow: { low: 33, high: 38 } })); // 37
+
+</script>

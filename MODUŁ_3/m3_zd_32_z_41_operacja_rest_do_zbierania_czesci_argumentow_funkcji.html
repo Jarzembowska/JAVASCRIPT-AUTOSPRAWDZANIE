@@ -1,0 +1,51 @@
+<h1>OPERACJA REST DO ZBIERANIA CZĘŚCI ARGUMENTÓW FUNKCJI</h1>
+<h5>zadanie - sumowanie liczb, które są większe od zadeklarowanej liczby</h5>
+
+<h5>ZADANIE</h5>
+<p>Funkcja addOverNum() oblicza sumę wszystkich argumentów.</p>
+<p>Zmień parametry i ciało funkcji addOverNum() tak, aby obliczała tylko sumę tych argumentów,</p>
+<p>które są większe niż określona liczba. Ta liczba musi być pierwszym parametrem funkcji.</p>
+
+<h5>TESTY</h5>
+<ul>
+  <li>Zadeklarowana funkcja addOverNum()</li>
+  <li>Wywołanie addOverNum(50, 15, 27) zwraca 0</li>
+  <li>Wywołanie addOverNum(10, 12, 4, 11, 48, 10, 8) zwraca 71</li>
+  <li>Wywołanie addOverNum(15, 32, 6, 13, 19, 8) zwraca 51</li>
+  <li>Wywołanie addOverNum(20, 74, 11, 62, 46, 12, 36) zwraca 218</li>
+</ul>
+
+<script>
+  //Kod przed zmianą
+  function addOverNum(...args) {
+    let total = 0;
+    for (const arg of args) {
+      total += arg;
+    }
+  }
+
+
+
+
+  //Kod po zmianie
+
+  // Change code below this line
+  function addOverNum(values, ...args) {
+    let total = 0;
+
+    for (const arg of args) {
+      if (arg <= values) {
+        continue;
+      }
+      total += arg;
+    }
+
+    return total;
+    // Change code above this line
+  }
+
+  console.log(addOverNum(50, 15, 27)); // 0
+  console.log(addOverNum(10, 12, 4, 11, 48, 10, 8)); // 71
+  console.log(addOverNum(15, 32, 6, 13, 19, 8)); // 51
+  console.log(addOverNum(20, 74, 11, 62, 46, 12, 36)); // 218
+</script>

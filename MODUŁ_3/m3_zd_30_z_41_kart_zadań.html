@@ -1,0 +1,54 @@
+<h1> ZADANIE - KARTY ZADAŃ</h1>
+
+<h5>TREŚĆ ZADANIA</h5>
+Napisz funkcję makeTask(data), która przyjmuje jeden parametr data - obiekt o następujących właściwościach.
+
+<ul>
+  <li>text - tekst zadania.</li>
+  <li>category - kategoria zadania.</li>
+  <li>priority - priorytet zadania.</li>
+</ul>
+Funkcja powinna utworzyć i zwrócić nowy obiekt zadania bez bezpośredniej modyfikacji parametru data. Nowy obiekt musi
+mieć właściwość completed, której wartość jest przechowywana w zmiennej lokalnej o tej samej nazwie.
+
+W parametrze data jest gwarantowana tylko właściwość text, i może brakować pozostałych dwóch category i priority. Wtedy
+w nowym obiekcie zadania właściwości category i priority powinny zawierać wartości domyślne przechowywane w zmiennych
+lokalnych o tej samej nazwie.
+
+<h5>TESTY</h5>
+
+<ul>
+  <li>Zadeklarowana funkcja makeTask(data)</li>
+  <li>Wywołanie makeTask({}) zwraca { category: "General", priority: "Normal", completed: false }</li>
+  <li>
+    Wywołanie makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }) zwraca { category:
+    "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+  </li>
+  <li>
+    Wywołanie makeTask({ category: "Finance", text: "Take interest" }) zwraca { category: "Finance", priority: "Normal",
+    text: "Take interest", completed: false }
+  </li>
+  <li>
+    Wywołanie makeTask({ priority: "Low", text: "Choose shampoo" }) zwraca { category: "General", priority: "Low", text:
+    "Choose shampoo", completed: false }
+  </li>
+  <li>
+    Wywołanie makeTask({ text: "Buy bread" }) zwraca { category: "General", priority: "Normal", text: "Buy bread",
+    completed: false }
+  </li>
+</ul>
+
+<script>
+  function makeTask(data) {
+    const completed = false;
+    const category = "General";
+    const priority = "Normal";
+    // Change code below this line
+    const { text } = data;
+    const data2 = { category, priority, text, completed, ...data };
+    return data2;
+    // Change code above this line
+  }
+  console.log(makeTask({ text: "Buy bread" })); //zwraca obiekt { category: "General", priority: "Normal", text: "Buy bread",
+                                                     //  completed: false }
+</script>

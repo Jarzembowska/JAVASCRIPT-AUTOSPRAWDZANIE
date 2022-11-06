@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h2>Komentarze</h2>
+
+  <p> Są przydatne do opisywania kodu, jak działa itp</p>
+  <script>
+    /* komentarz
+    w wielu liniach
+    */
+    console.log("Witaj w świecie!");
+
+    //  pojedynczy komentarz w jednej linii
+    console.log("Kolejny tekst.");
+  </script>
+
+  <h2>Zmienne - variables</h2>
+  <p>
+    Zmienna to w praktyce pewne pudełko w pamięci, w którym możemy<br>
+    przechowywać jakąś wartość np. tekst, liczbę, obiekty itd.<br>
+    Każda zmienna ma identyfikator czyli nazwę zmiennej <br>
+    przez co możemy się do niej odwołać w programie
+  </p>
+
+  <script>
+    // 3 zmienne : text1, text2, finalText
+    let text1 = "Witaj "; // let to słowo kluczowe, tworzy zmienną text1 - identyfikator , "Witaj" - to wartość zmiennej o identyfikatorze text1
+    let text2 = "Świecie!";
+    let finalText = text1 + text2;
+
+    // Wyświetlenie w konsoli wartości zmiennej finalText
+    console.log(finalText); // Witaj Świecie!
+  </script>
+</body>
+
+</html>

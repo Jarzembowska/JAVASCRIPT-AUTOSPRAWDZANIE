@@ -1,0 +1,60 @@
+<h1>DOSTĘP DO WŁAŚCIWOŚCI OBIEKTU W JEGU METODACH</h1>
+<h3>ZADANIE</h3>
+<p>
+  Uzupełnij metodę updateBook(oldName, newName) tak, <br>
+  aby zmieniała tytuł książki z oldName na newName we właściwości books. <br>
+  Użyj indexOf(), aby znaleźć żądany element tablicy, i splice(), aby zastąpić ten element.<br>
+</p>
+
+<ul>
+  <li>Zadeklarowana zmienna bookShelf</li>
+
+  <li>Wartością zmiennej bookShelf jest obiekt</li>
+
+  <li>Wartością właściwości bookShelf.updateBook jest metoda obiektu</li>
+
+  <li>
+    Po wywołaniu metody bookShelf.updateBook("Haze", "Dungeon chronicles"), wartością właściwości books jest tablica
+    ["The
+    last kingdom", "Dungeon chronicles", "The guardian of dreams"]
+  </li>
+
+  <li>
+    Po wywołaniu metody bookShelf.updateBook("The last kingdom", "Dune"), wartością właściwości books jest tablica
+    ["Dune", "Haze", "The guardian of dreams"]
+  </li>
+</ul>
+
+<script>
+  // Kod przed zmianą
+  // 
+  //   const bookShelf = {
+  //    books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  //    updateBook(oldName, newName) {
+  //      // Change code below this line
+
+
+
+  //      // Change code above this line
+  //    },
+  //  };
+  // 
+
+  // Kod po zmianie
+  const bookShelf = {
+    books: ["The last kingdom", "Haze", "The guardian of dreams"],
+    getBooks() {
+      return this.books;
+    },
+    updateBook(oldName, newName) {
+      // Change code below this line
+      const bookIndex = this.books.indexOf(oldName);
+      this.books.splice(bookIndex, 1, newName);
+      // Change code above this line
+    },
+
+  };
+  console.log(bookShelf.getBooks()); //['The last kingdom', 'Haze', 'The guardian of dreams']
+  bookShelf.updateBook("Haze", "Dungeon chronicles");
+  console.log(bookShelf.getBooks()); //['The last kingdom', 'Dungeon chronicles', 'The guardian of dreams']
+</script>

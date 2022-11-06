@@ -1,0 +1,27 @@
+<h1>ZADANIE: ZAKTUALIZUJ MIKSTURĘ</h1>
+<h3>ZADANIE</h3>
+<!-- 
+  Uzupełnij metodę updatePotionName(oldName, newName) tak, aby aktualizowała nazwę mikstury z oldName do newName, w tablicy mikstur we właściwości potions.
+
+- Zadeklarowana zmienna atTheOldToad
+- Wartość zmiennej atTheOldToad to obiekt
+- Wartość właściwości atTheOldToad.potions to tablica ["Speed potion", "Dragon breath", "Stone skin"]
+- Wartość właściwości atTheOldToad.updatePotionName to metoda obiektu
+- Po pierwszym wywołaniu metody atTheOldToad.updatePotionName("Dragon breath", "Polymorth"), właściwość potions będzie zawierać tablicę ["Speed potion", "Polymorth", "Stone skin"]
+- Po drugim wywołaniu metody atTheOldToad.updatePotionName("Stone skin", "Invisibility"), właściwość potions będzie zawierać tablicę ["Speed potion", "Polymorth", "Invisibility"]
+
+-->
+
+<script>
+  const atTheOldToad = {
+    potions: ["Speed potion", "Dragon breath", "Stone skin"],
+    updatePotionName(oldName, newName) {
+      // Change code below this line
+      const potionIndex = this.potions.indexOf(oldName);
+      this.potions.splice(potionIndex, 1, newName);
+
+      // Change code above this line
+    },
+  };
+
+</script>

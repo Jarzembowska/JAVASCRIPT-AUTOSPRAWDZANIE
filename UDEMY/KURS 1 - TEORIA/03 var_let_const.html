@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    Deklaracja zmiennej - var, let, const
+
+    Aby utowrzyć zmienną, inaczej mówiąc zadeklarować ją mamy do wyboru kilka możliwości:
+
+    - var deklaruje zmienną o zakresie funkcyjnym, przez długie lata najpopularniejszy sposób np:
+
+    var data1 = 3; // pojedyncze = przypisuje wartość do zmiennej
+    
+    - let - dodane w ES6 / ES2015 deklaruje zmienną o zakresie blokowym
+
+    let someData = 1;
+
+    - const dodane w ES6 / ES2015 deklaruje stałą o zakresie blokowym, nie może ulec zmianie
+
+    const dataCantChange = 22;
+
+  
+  -->
+  <h3>Deklaracja zmiennej - var, let, const</h3>
+
+  <p>Aby utowrzyć zmienną, inaczej mówiąc zadeklarować ją mamy do wyboru kilka możliwości:</p>
+  <ul>
+
+    <li>var - deklaruje zmienną o zakresie funkcyjnym, przez długie lata najpopularniejszy sposób np:<br><br>
+      var data1 = 3; // pojedyncze = przypisuje wartość do zmiennej<br><br>
+    </li>
+
+    <li>let - dodane w ES6 / ES2015 deklaruje zmienną o zakresie blokowym<br><br>
+      let someData = 1; <br><br>
+    </li>
+
+    <li>
+      const - dodane w ES6 / ES2015 deklaruje stałą o zakresie blokowym, nie może ulec zmianie <br><br>
+      const dataCantChange = 22; <br><br>
+    </li>
+  </ul>
+  <!-- 
+      Zmienne 
+
+      Zmienne zawsze deklarujemy przed użyciem.
+
+ -->
+  <script>
+    let z1, data, test; // zadeklarowanie nazw zmiennych
+    console.log(test); // wyświetli undefined, bo nie ma przypisanej wartości do zmiennej
+
+    z1 = 5; // przypisanie wartości do zmiennej z1
+    data = "tekst"; // do data
+    test = 4 * z1; // oraz test
+
+    console.log(test); //wyświetli w konsoli 20
+  </script>
+
+  <!--  
+    Słowa kluczowe w JavaScript dla ES2015
+    
+    break
+    case
+    catch
+    class
+    const
+    continue
+    debugger
+    default
+    delete
+    do
+    else
+    export
+    extends
+    finally
+    for
+    function
+    if
+    import
+    instanceof
+    new
+    return
+    super
+    switch
+    this
+    throw
+    try
+    typeof
+    var
+    void
+    while
+    with
+    yield
+
+
+    Dla strict mode:
+    
+    implements
+    interface
+    let
+    package
+    private
+    protected
+    public
+    static
+
+   -->
+
+</body>
+
+</html>

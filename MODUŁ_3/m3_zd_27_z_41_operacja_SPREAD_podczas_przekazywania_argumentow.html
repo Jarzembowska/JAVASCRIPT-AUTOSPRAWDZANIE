@@ -1,0 +1,37 @@
+<h1>OPERACJA SPREAD PODCZAS PRZEKAZYWANIA ARGUMENTÓW</h1>
+
+<h5>TEORIA</h5>
+Składnia ... (spread) umożliwia "rozkładanie" kolekcji elementów (tablicy, ciągu lub obiektu) w miejscu, w którym
+oczekiwany jest zestaw różnych wartości.
+
+Oczywiście istnieją pewne ograniczenia, na przykład nie można "rozłożyć" tablicy do obiektu i odwrotnie.
+
+Isnieje analogia z pudełkiem jabłek. Kładąc pudełko na podłodze bez wyjmowania z niego jabłek, otrzymujemy analog tabicy
+wartości.
+
+Jeśli wysypać jabłka z pudełka na podłogę, następuje "rozkładanie" - zestaw oddzielnych wartości.
+
+Jest tylko jedna różnica - w JavaScript "rozkładanie" nie zmienia oryginalnej kolekcji, czyli tworzy kopię każdego
+elementu.
+
+Po "rozkładaniu" na podłodze będzie pudełko pełne jabłek i kopia każdego.
+
+Na przykład metoda Math.max(argument) wyszukuje i zwraca największy z argumentów (liczb), co oznacza, że nie oczekuje
+tablicy wartości, ale dowolnej liczby argumentów.
+
+<script>
+  const temps = [14, -4, 25, 8, 11];
+  // Konsola będzie miała tablicę
+  console.log(temps);
+
+  // ❌ To nie zadziała, ponieważ przekazujemy całą tablicę
+  console.log(Math.max(temps)); // NaN
+
+  // Konsola będzie miała zestaw oddzielnych licz console.log(...temps);
+
+  // ✅ Rozłóżmy kolekcję elementów jako oddzielne argumenty
+console.log(Math.max(...temps)); // 25
+
+/* czyli wpis Math.max(...[14, -4, 25, 8, 11]) - składnia ... zwraca rozpakowaną tablicę, czyli rozkłada jej elementy jako oddzielne argumenty */
+
+</script>

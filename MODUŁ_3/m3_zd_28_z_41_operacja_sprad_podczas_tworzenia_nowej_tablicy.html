@@ -1,0 +1,101 @@
+<h1>OPERACJA SPREAD PODCZAS TWORZENIA NOWEJ TABLICY</h1>
+
+<h5>ZADANIE</h5>
+
+<p>
+  W zmiennych :
+  firstGroupScores,
+  secondGroupScores i
+  thirdGroupScores
+  przechowywane są wyniki testów poszczególnych grup. Używając rozkładania, uzupełnij kod tak, aby:
+</p>
+<p>
+  Używając rozkładania, uzupełnij kod tak, aby:
+</p>
+<ul>
+  <li>
+    Zmienna allScores przechowywała tablicę wszystkich wyników od pierwszej do trzeciej grupy.
+  </li>
+  <li>
+    Zmienna bestScore miała najwyższy ogólny wynik.
+  </li>
+  <li>
+    Zmienna worstScore miała najniższy ogólny wynik.
+  </li>
+</ul>
+
+<h5>TESTY</h5>
+<ul>
+  <li>
+    Zadeklarowana zmienna firstGroupScores
+  </li>
+  <li>
+    Wartością zmiennej firstGroupScores jest tablica [64, 42, 93]
+  </li>
+  <li>
+    Zadeklarowana zmienna secondGroupScores
+  </li>
+  <li>
+    Wartością zmiennej secondGroupScores jest tablica [89, 14, 51, 26]
+  </li>
+  <li>
+    Zadeklarowana zmienna thirdGroupScores
+  </li>
+  <li>
+    Wartością zmiennej thirdGroupScores jest tablica [29, 47, 18, 97, 81]
+  </li>
+  <li>
+    Zadeklarowana zmienna allScores
+  </li>
+  <li>
+    Wartością zmiennej allScores jest tablica [64, 42, 93, 89, 14, 51, 26, 29, 47, 18, 97, 81]
+  </li>
+  <li>
+    Zadeklarowana zmienna bestScore
+  </li>
+  <li>
+    Wartością zmiennej bestScore jest liczba 97
+  </li>
+  <li>
+    Zadeklarowana zmienna worstScore
+  </li>
+  <li>
+    Wartością zmiennej worstScore jest liczba 14
+  </li>
+  <li>
+    Podczas przypisywania wartości do zmiennej allScores do wypełnienia tablicy użyto składni ...
+  </li>
+  <li>
+    Aby przekazać argumenty do metody Math.max() używana jest składnia ... w tablicy allScores
+  </li>
+  <li>
+    Aby przekazać argumenty do metody Math.min() używana jest składnia ... w tablicy allScores
+  </li>
+</ul>
+
+<script>
+
+
+  const firstGroupScores = [64, 42, 93];
+  const secondGroupScores = [89, 14, 51, 26];
+  const thirdGroupScores = [29, 47, 18, 97, 81];
+  // Change code below this line
+
+  // Kod przed zmianą
+  // const allScores = [];
+  // const bestScore = allScores;
+  // const worstScore = allScores;
+
+  // Kod po zmianie
+
+  const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+  const bestScore = Math.max(...allScores);
+  const worstScore = Math.min(...allScores);
+
+  console.log(allScores);// [64, 42, 93, 89, 14, 51, 26, 29, 47, 18, 97, 81]
+
+  console.log(bestScore); // 97
+
+  console.log(worstScore); // 14
+
+</script>

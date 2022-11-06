@@ -1,0 +1,39 @@
+<h1>OPERACJA SPREAD PODCZAS TWORZENIA NOWEJ TABLICY</h1>
+<h5>TEORIA</h5>
+
+<p> Operacja spread pozwala na utworzenie kopii tablicy lub "sklejenie" dowolnej liczby tablic w jedną nową </p>
+.
+<!-- 
+  " . " i ENTER w VSC tworzy:
+ -->
+
+<!--  
+  <div class=""></div>  
+-->
+
+<p> Wcześniej używano do tego metod slice() i concat() </p>
+
+<script>
+  const temps = [14, -4, 25, 8, 11];
+
+  // To jest dokładna, ale niezależna kopia tablicy temps
+  const copyOfTemps = [...temps];
+  console.log(copyOfTemps); // [14, -4, 25, 8, 11]
+
+
+  /*
+  W powyższym przykładzie mamy pudełko jabłek temps i chcemy zrobić jego dokładną kopię. Bierzemy puste pudełko i wsypujemy do niego jabłka z oryginalnego pudełka temps - rozkładamy je do innej kolekcji. W tym przypadku pudełko temps nie zmieni się, nadal będzie zawierało jabłka, a nowe pudełko będzie zawierało ich dokładne kopie.
+  */
+  /*
+  W poniższym przykładzie wsypujemy jabłka z dwóch pudełek do jednego nowego. Oryginalne pudełka (tablice) nie ulegną zmianie, ale nowe będą zawierały kopie wszystkich ich jabłek (elementów). Kolejność rozkładania jest ważna - wpływa na kolejność elementów w nowej kolekcji.
+  */
+
+  const lastWeekTemps = [14, 25, 11];
+  
+  const currentWeekTemps = [23, 17, 18];
+
+  const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+
+  console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+
+</script>

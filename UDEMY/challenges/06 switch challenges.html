@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    1. Wykorzystaj switch do określenia pory roku na bazie numeru
+        miesiąca w zmiennej monthNum (od 1 do 12).
+    2. Przypisz porę roku która odpowiada wartości monthNum do
+        zmiennej o nazwie season.
+    3. Zaprezentuj w konsoli informację o porze roku.
+  
+    Pory roku dla liczb:
+    3, 4, 5 - wiosna
+    6, 7, 8 - lato
+    9, 10, 11 - jesień
+    12, 1 , 2 - zima
+    */
+    let monthNum = 3;
+    let season = "";
+
+    switch (monthNum) {
+      case 3:
+      case 4:
+      case 5:
+        season = "wiosna";
+        break;
+      case 6:
+      case 7:
+      case 8:
+        season = "lato";
+        break;
+      case 9:
+      case 10:
+      case 11:
+        season = "jesień";
+        break;
+      case 12:
+      case 1:
+      case 2:
+        season = "zima";
+        break;
+      default:
+        season = "brak informacji";
+    }
+
+    console.log("Numer miesiąca " + monthNum + " wskauzje na " + season);
+  </script>
+</body>
+
+</html>
