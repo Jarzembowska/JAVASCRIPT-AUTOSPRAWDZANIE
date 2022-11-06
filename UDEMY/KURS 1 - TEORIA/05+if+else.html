@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        if (10 > 5) { // true
+            console.log("#1 wykona się");
+        }  
+
+        if (7 <= 7) { // true
+            console.log("#2 wykona się ");
+        }
+
+        if ( 8 <= 7 ) { // false
+            console.log("#3 wykna się");
+        }
+
+        let data1 = 9;
+        if (data1 > 5) { // true
+            console.log("#4 wykona się bo 9 większe od 5 ");
+        }
+
+        if (data1 < 5) { // false
+            console.log("#5 wykona się data1 < 5");
+        } else {
+            console.log("#5 wykona się bo data1 większe od 5");
+        }
+
+        let info = 23;
+
+        if (info < 0) {
+            console.log("info mniejsze od zera");
+        } else if (info == 0) {
+            console.log("info równe jest 0");
+        } else if (info == 2) {
+            console.log("info równe jest 2");
+        } else {
+            console.log("ostatni else dla info:", info);
+        }
+
+        if (10 != 8) {
+            console.log("true bo 10 nie jest równe 8");
+        }
+
+        if (true) {
+            console.log("true, wykona się");
+        }
+
+        if (true == true) {
+            console.log("true równe jest true, wykona się");
+        }
+
+        // 5 jest true ponieważ nie jest zerem, a zero daje false
+        if (5) {
+            console.log("Wartość 5");
+        }
+
+        // 0 jest fałszem, jest konwertowany na false
+        if (0) {
+            console.log("0 wykona się");
+        }
+
+        if (-10) console.log("wykona się bo -10 nie jest 0");
+
+        /*
+            sprawdzenie temperatury w stopniach z zmiennej temperture
+            - czy temperature < 0  "bierzemy kurtkę"
+            - czy temperature == 0  "bierzemy lekką kurtkę"
+            - czy temperature >= 20  "bierzemy krótki rękaw"
+            - else "zostajemy w domu"
+        */
+
+        let temperature = 1;
+
+        if (temperature < 0) {
+            console.log("bierzemy kurtkę");
+        } else if (temperature == 0) {
+            console.log("bierzemy lekką kurtkę");
+        } else if (temperature >= 20) {
+            console.log("bierzemy krótki rękaw");
+        } else {
+            console.log("zostajemy w domu");
+        }
+
+
+
+
+    </script>
+</body>
+</html>

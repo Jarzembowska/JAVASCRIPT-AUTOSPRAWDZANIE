@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      1. Stwórz zmienną numbers z wartościami w tablicy od 1 do 6.
+         Wykorzystaj pętlę while w której przejdziesz po tablicy od
+         początku, każdą pobraną wartośc tablicy pomnóż dwukrotnie i wyświetl w konsoli.
+      2. Dodaj zmienną names jako tablicę imion: Ania, Ola, Kasia, Olek i Rafał.
+         Następnie wyświetl imiona od początku do końca pętli for. 
+         Później wyświetl ponownie imiona, ale tym razem od końca również w pętli for.
+    */
+    console.log("Tablica liczb z pętlą while")
+    let numbers = [1, 2, 3, 4, 5, 6];
+    console.log(numbers);
+    let i = 0;
+    while (i < numbers.length) { // długość tablicy
+      console.log(numbers[i] * 2);
+      // i += 1;
+      i++;
+    }
+
+
+    console.log("Tablica wywołana od początku do końca sposób 1");
+    let names = ["Ania", "Ola", "Kasia", "Olek", "Rafał"];
+    for (let j = 0; j < names.length; j++) {
+      console.log(names[j]);
+    }
+
+    // lub taki zapis
+    console.log("Tablica wywołana od początku do końca sposób 2");
+    for (let j = 0; j < names.length; j++) {
+      let el = names[j];
+      console.log(el);
+    }
+
+
+    // names.length - 1 (czyli 5 elementów - 1 = 4 to wartość ostatniego indeksu tablicy) dlatego iż elementów jest 5 ale indeksy tablicy to 0, 1, 2, 3, 4 czyli ostatni indeks elementu tablicy to wartość names.length -1 - musii być mniejszy o 1 bo tablica nie ma indeksu 5 
+
+    console.log("Tablica wywołana od końca do początku sposób 1");
+    for (let j = names.length - 1; j >= 0; j--) {
+      console.log(names[j]);
+    }
+
+    console.log("Tablica wywołana od końca do początku sposób 2");
+    for (let j = names.length - 1; j >= 0; j--) {
+      let el = names[j];
+      console.log(el);
+    }
+  </script>
+</body>
+
+</html>
